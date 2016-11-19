@@ -31,3 +31,6 @@
 # Sublime Text
 *.sublime-project
 *.sublime-workspace
+
+# Arduino Makefile
+Arduino/build-*/
