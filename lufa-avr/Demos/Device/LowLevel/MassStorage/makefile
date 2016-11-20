@@ -18,9 +18,10 @@ F_CPU        = 16000000
 F_USB        = $(F_CPU)
 OPTIMIZATION = s
 TARGET       = MassStorage
-SRC          = $(TARGET).c Descriptors.c Lib/DataflashManager.c Lib/SCSI.c $(LUFA_SRC_USB)
+SRC          = $(TARGET).c Descriptors.c $(LUFA_SRC_USB)
+# Lib/DataflashManager.c Lib/SCSI.c
 LUFA_PATH    = ../../../../LUFA
-CC_FLAGS     = -DUSE_LUFA_CONFIG_HEADER -IConfig/
+CC_FLAGS     = -DUSE_LUFA_CONFIG_HEADER -IConfig/ -Wno-comment
 LD_FLAGS     =
 
 # Default target

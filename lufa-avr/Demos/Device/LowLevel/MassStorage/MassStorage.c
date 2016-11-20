@@ -36,6 +36,7 @@
 
 #define  INCLUDE_FROM_MASSSTORAGE_C
 #include "MassStorage.h"
+#include <avr/io.h>
 
 /** Structure to hold the latest Command Block Wrapper issued by the host, containing a SCSI command to execute. */
 MS_CommandBlockWrapper_t  CommandBlock;
@@ -45,7 +46,33 @@ MS_CommandStatusWrapper_t CommandStatus = { .Signature = MS_CSW_SIGNATURE };
 
 /** Flag to asynchronously abort any in-progress data transfers upon the reception of a mass storage reset command. */
 volatile bool IsMassStoreReset = false;
+unsigned char serialmsg[] = {'T', 'e', 's', 't'};
 
+void serialBegin()
+{
+	const unsigned int baud = 57600;
+	UBRR1 = (F_CPU / 4 / baud - 1) / 2;
+	UCSR1A = (1<<U2X1);
+	UCSR1B = (1<<RXEN1) | (1<<TXEN1) | (1<<RXCIE1);
+	UCSR1C = (1<<USBS1)|(3<<UCSZ10);
+}
+
+void serialWrite( unsigned char* data )
+{
+	/* Wait for empty transmit buffer */
+	while ( !( UCSR1A & (1<<UDRE1)) )
+	;
+	/* Put data into buffer, sends the data */
+	UDR1 = (uint8_t)*data;
+}
+
+void serialWriteArray( unsigned char data[], unsigned int len)
+{
+	for(int i = 0; i < len; i++)
+	{
+		serialWrite(data + i);
+	}
+}
 
 /** Main program entry point. This routine configures the hardware required by the application, then
  *  enters a loop to run the application tasks in sequence.
@@ -56,6 +83,7 @@ int main(void)
 
 	LEDs_SetAllLEDs(LEDMASK_USB_NOTREADY);
 	GlobalInterruptEnable();
+	serialBegin();
 
 	for (;;)
 	{
@@ -88,18 +116,18 @@ void SetupHardware(void)
 
 	/* Hardware Initialization */
 	LEDs_Init();
-	Dataflash_Init();
+	//Dataflash_Init();
 	USB_Init();
 
 	/* Check if the Dataflash is working, abort if not */
-	if (!(DataflashManager_CheckDataflashOperation()))
+	/*if (!(DataflashManager_CheckDataflashOperation()))
 	{
 		LEDs_SetAllLEDs(LEDMASK_USB_ERROR);
 		for(;;);
 	}
 
-	/* Clear Dataflash sector protections, if enabled */
-	DataflashManager_ResetDataflashProtections();
+	/* Clear Dataflash sector protections, if enabled 
+	DataflashManager_ResetDataflashProtections();*/
 }
 
 /** Event handler for the USB_Connect event. This indicates that the device is enumerating via the status LEDs. */
@@ -192,7 +220,7 @@ void MassStorage_Task(void)
 		  Endpoint_SelectEndpoint(MASS_STORAGE_IN_EPADDR);
 
 		/* Decode the received SCSI command, set returned status code */
-		CommandStatus.Status = SCSI_DecodeSCSICommand() ? MS_SCSI_COMMAND_Pass : MS_SCSI_COMMAND_Fail;
+		//CommandStatus.Status = SCSI_DecodeSCSICommand() ? MS_SCSI_COMMAND_Pass : MS_SCSI_COMMAND_Fail;
 
 		/* Load in the CBW tag into the CSW to link them together */
 		CommandStatus.Tag = CommandBlock.Tag;
@@ -236,34 +264,34 @@ void MassStorage_Task(void)
  *  \return Boolean \c true if a valid command block has been read in from the endpoint, \c false otherwise
  */
 static bool ReadInCommandBlock(void)
-{
+{/*
 	uint16_t BytesTransferred;
 
-	/* Select the Data Out endpoint */
+	/* Select the Data Out endpoint 
 	Endpoint_SelectEndpoint(MASS_STORAGE_OUT_EPADDR);
 
-	/* Abort if no command has been sent from the host */
+	/* Abort if no command has been sent from the host 
 	if (!(Endpoint_IsOUTReceived()))
 	  return false;
 
-	/* Read in command block header */
+	/* Read in command block header 
 	BytesTransferred = 0;
 	while (Endpoint_Read_Stream_LE(&CommandBlock, (sizeof(CommandBlock) - sizeof(CommandBlock.SCSICommandData)),
 	                               &BytesTransferred) == ENDPOINT_RWSTREAM_IncompleteTransfer)
 	{
-		/* Check if the current command is being aborted by the host */
+		/* Check if the current command is being aborted by the host 
 		if (IsMassStoreReset)
 		  return false;
 	}
 
-	/* Verify the command block - abort if invalid */
+	/* Verify the command block - abort if invalid 
 	if ((CommandBlock.Signature         != MS_CBW_SIGNATURE) ||
 	    (CommandBlock.LUN               >= TOTAL_LUNS)       ||
 		(CommandBlock.Flags              & 0x1F)             ||
 		(CommandBlock.SCSICommandLength == 0)                ||
 		(CommandBlock.SCSICommandLength >  sizeof(CommandBlock.SCSICommandData)))
 	{
-		/* Stall both data pipes until reset by host */
+		/* Stall both data pipes until reset by host 
 		Endpoint_StallTransaction();
 		Endpoint_SelectEndpoint(MASS_STORAGE_IN_EPADDR);
 		Endpoint_StallTransaction();
@@ -271,19 +299,19 @@ static bool ReadInCommandBlock(void)
 		return false;
 	}
 
-	/* Read in command block command data */
+	/* Read in command block command data 
 	BytesTransferred = 0;
 	while (Endpoint_Read_Stream_LE(&CommandBlock.SCSICommandData, CommandBlock.SCSICommandLength,
 	                               &BytesTransferred) == ENDPOINT_RWSTREAM_IncompleteTransfer)
 	{
-		/* Check if the current command is being aborted by the host */
+		/* Check if the current command is being aborted by the host 
 		if (IsMassStoreReset)
 		  return false;
 	}
 
-	/* Finalize the stream transfer to send the last packet */
+	/* Finalize the stream transfer to send the last packet 
 	Endpoint_ClearOUT();
-
+*/
 	return true;
 }
 

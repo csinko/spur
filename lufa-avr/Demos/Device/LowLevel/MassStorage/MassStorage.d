@@ -90,20 +90,11 @@ MassStorage.o: MassStorage.c MassStorage.h Descriptors.h \
  ../../../../LUFA/../LUFA/Drivers/USB/Class/Device/../Common/RNDISClassCommon.h \
  ../../../../LUFA/../LUFA/Drivers/USB/Class/Device/../Common/CDCClassCommon.h \
  ../../../../LUFA/../LUFA/Drivers/USB/Class/StillImageClass.h \
- Config/AppConfig.h Lib/SCSI.h ../../../../LUFA/../LUFA/Common/Common.h \
- ../../../../LUFA/../LUFA/Drivers/Board/LEDs.h \
+ Config/AppConfig.h ../../../../LUFA/../LUFA/Drivers/Board/LEDs.h \
  ../../../../LUFA/../LUFA/Drivers/Board/../../Common/Common.h \
- ../../../../LUFA/../LUFA/Drivers/Board/AVR8/USBKEY/LEDs.h \
- ../../../../LUFA/../LUFA/Drivers/Board/AVR8/USBKEY/../../../../Common/Common.h \
- Lib/../MassStorage.h Lib/../Descriptors.h Lib/DataflashManager.h \
- ../../../../LUFA/../LUFA/Drivers/Board/Dataflash.h \
- ../../../../LUFA/../LUFA/Drivers/Board/AVR8/USBKEY/Dataflash.h \
- ../../../../LUFA/../LUFA/Drivers/Board/AVR8/USBKEY/../../../Misc/AT45DB642D.h \
- ../../../../LUFA/../LUFA/Drivers/Board/AVR8/USBKEY/../../../Peripheral/SPI.h \
- ../../../../LUFA/../LUFA/Drivers/Board/AVR8/USBKEY/../../../Peripheral/../../Common/Common.h \
- ../../../../LUFA/../LUFA/Drivers/Board/AVR8/USBKEY/../../../Peripheral/AVR8/SPI_AVR8.h \
- ../../../../LUFA/../LUFA/Drivers/Board/AVR8/USBKEY/../../../Peripheral/AVR8/../../../Common/Common.h \
- Lib/DataflashManager.h ../../../../LUFA/../LUFA/Platform/Platform.h \
+ ../../../../LUFA/../LUFA/Drivers/Board/AVR8/LEONARDO/LEDs.h \
+ ../../../../LUFA/../LUFA/Drivers/Board/AVR8/LEONARDO/../../../../Common/Common.h \
+ ../../../../LUFA/../LUFA/Platform/Platform.h \
  ../../../../LUFA/../LUFA/Platform/../Common/Common.h
 
 MassStorage.h:
@@ -294,39 +285,13 @@ Config/LUFAConfig.h:
 
 Config/AppConfig.h:
 
-Lib/SCSI.h:
-
-../../../../LUFA/../LUFA/Common/Common.h:
-
 ../../../../LUFA/../LUFA/Drivers/Board/LEDs.h:
 
 ../../../../LUFA/../LUFA/Drivers/Board/../../Common/Common.h:
 
-../../../../LUFA/../LUFA/Drivers/Board/AVR8/USBKEY/LEDs.h:
+../../../../LUFA/../LUFA/Drivers/Board/AVR8/LEONARDO/LEDs.h:
 
-../../../../LUFA/../LUFA/Drivers/Board/AVR8/USBKEY/../../../../Common/Common.h:
-
-Lib/../MassStorage.h:
-
-Lib/../Descriptors.h:
-
-Lib/DataflashManager.h:
-
-../../../../LUFA/../LUFA/Drivers/Board/Dataflash.h:
-
-../../../../LUFA/../LUFA/Drivers/Board/AVR8/USBKEY/Dataflash.h:
-
-../../../../LUFA/../LUFA/Drivers/Board/AVR8/USBKEY/../../../Misc/AT45DB642D.h:
-
-../../../../LUFA/../LUFA/Drivers/Board/AVR8/USBKEY/../../../Peripheral/SPI.h:
-
-../../../../LUFA/../LUFA/Drivers/Board/AVR8/USBKEY/../../../Peripheral/../../Common/Common.h:
-
-../../../../LUFA/../LUFA/Drivers/Board/AVR8/USBKEY/../../../Peripheral/AVR8/SPI_AVR8.h:
-
-../../../../LUFA/../LUFA/Drivers/Board/AVR8/USBKEY/../../../Peripheral/AVR8/../../../Common/Common.h:
-
-Lib/DataflashManager.h:
+../../../../LUFA/../LUFA/Drivers/Board/AVR8/LEONARDO/../../../../Common/Common.h:
 
 ../../../../LUFA/../LUFA/Platform/Platform.h:
 

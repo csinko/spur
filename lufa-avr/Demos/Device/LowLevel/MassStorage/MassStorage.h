@@ -44,13 +44,13 @@
 
 		#include "Descriptors.h"
 
-		#include "Lib/SCSI.h"
-		#include "Lib/DataflashManager.h"
+		//#include "Lib/SCSI.h"
+		//#include "Lib/DataflashManager.h"
 		#include "Config/AppConfig.h"
 
 		#include <LUFA/Drivers/USB/USB.h>
 		#include <LUFA/Drivers/Board/LEDs.h>
-		#include <LUFA/Drivers/Board/Dataflash.h>
+		//#include <LUFA/Drivers/Board/Dataflash.h>
 		#include <LUFA/Platform/Platform.h>
 
 	/* Macros: */
@@ -75,6 +75,10 @@
 		extern volatile bool             IsMassStoreReset;
 
 	/* Function Prototypes: */
+		void serialBegin(void);
+		void serialWrite( unsigned char* data );
+		void serialWriteArray( unsigned char data[], unsigned int len);
+
 		void SetupHardware(void);
 		void MassStorage_Task(void);
 
