@@ -1,42 +1,5 @@
-/*
-             LUFA Library
-     Copyright (C) Dean Camera, 2015.
-
-  dean [at] fourwalledcubicle [dot] com
-           www.lufa-lib.org
-*/
-
-/*
-  Copyright 2015  Dean Camera (dean [at] fourwalledcubicle [dot] com)
-
-  Permission to use, copy, modify, distribute, and sell this
-  software and its documentation for any purpose is hereby granted
-  without fee, provided that the above copyright notice appear in
-  all copies and that both that the copyright notice and this
-  permission notice and warranty disclaimer appear in supporting
-  documentation, and that the name of the author not be used in
-  advertising or publicity pertaining to distribution of the
-  software without specific, written prior permission.
-
-  The author disclaims all warranties with regard to this
-  software, including all implied warranties of merchantability
-  and fitness.  In no event shall the author be liable for any
-  special, indirect or consequential damages or any damages
-  whatsoever resulting from loss of use, data or profits, whether
-  in an action of contract, negligence or other tortious action,
-  arising out of or in connection with the use or performance of
-  this software.
-*/
-
-/** \file
- *
- *  Main source file for the Mass Storage demo. This file contains the main tasks of the demo and
- *  is responsible for the initial application hardware configuration.
- */
-
 #define  INCLUDE_FROM_MASSSTORAGE_C
 #include "MassStorage.h"
-#include <avr/io.h>
 
 /** Structure to hold the latest Command Block Wrapper issued by the host, containing a SCSI command to execute. */
 MS_CommandBlockWrapper_t  CommandBlock;
@@ -46,44 +9,19 @@ MS_CommandStatusWrapper_t CommandStatus = { .Signature = MS_CSW_SIGNATURE };
 
 /** Flag to asynchronously abort any in-progress data transfers upon the reception of a mass storage reset command. */
 volatile bool IsMassStoreReset = false;
+
 unsigned char serialmsg[] = {'T', 'e', 's', 't'};
+unsigned char hexLookup[] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'F'};
+unsigned char msg[] = {'d', 'a', 't', 'a', ' ', 'a', 't', ' ', 'o', 'u', 't', ' ', 'e', 'n', 'd', 'p', 'o', 'i', 'n', 't', '\n'};
 
-void serialBegin()
-{
-	const unsigned int baud = 57600;
-	UBRR1 = (F_CPU / 4 / baud - 1) / 2;
-	UCSR1A = (1<<U2X1);
-	UCSR1B = (1<<RXEN1) | (1<<TXEN1) | (1<<RXCIE1);
-	UCSR1C = (1<<USBS1)|(3<<UCSZ10);
-}
-
-void serialWrite( unsigned char* data )
-{
-	/* Wait for empty transmit buffer */
-	while ( !( UCSR1A & (1<<UDRE1)) )
-	;
-	/* Put data into buffer, sends the data */
-	UDR1 = (uint8_t)*data;
-}
-
-void serialWriteArray( unsigned char data[], unsigned int len)
-{
-	for(int i = 0; i < len; i++)
-	{
-		serialWrite(data + i);
-	}
-}
-
-/** Main program entry point. This routine configures the hardware required by the application, then
- *  enters a loop to run the application tasks in sequence.
- */
 int main(void)
 {
+	serialBegin();
+
 	SetupHardware();
 
 	LEDs_SetAllLEDs(LEDMASK_USB_NOTREADY);
 	GlobalInterruptEnable();
-	serialBegin();
 
 	for (;;)
 	{
@@ -92,7 +30,6 @@ int main(void)
 	}
 }
 
-/** Configures the board hardware and chip peripherals for the demo's functionality. */
 void SetupHardware(void)
 {
 #if (ARCH == ARCH_AVR8)
@@ -154,6 +91,7 @@ void EVENT_USB_Device_Disconnect(void)
  */
 void EVENT_USB_Device_ConfigurationChanged(void)
 {
+	//serialWriteArray(msg, 9);
 	bool ConfigSuccess = true;
 
 	/* Setup Mass Storage Data Endpoints */
@@ -170,6 +108,45 @@ void EVENT_USB_Device_ConfigurationChanged(void)
  */
 void EVENT_USB_Device_ControlRequest(void)
 {
+	/*uint8_t type = USB_ControlRequest.bmRequestType;
+	for(int i = 7; i >= 0; i--)
+	{
+		uint8_t bit = type >> i;
+		bit &= 1;
+		if(bit == 1)
+			serialWrite('1');
+		else
+			serialWrite('0');
+	}
+	serialWrite(' ');
+
+	uint8_t commandCode = USB_ControlRequest.bRequest;
+	for(int i = 7; i >= 0; i--)
+	{
+		uint8_t bit = commandCode >> i;
+		bit &= 1;
+		if(bit == 1)
+			serialWrite('1');
+		else
+			serialWrite('0');
+	}
+	serialWrite(' ');
+
+	uint16_t wValue = USB_ControlRequest.wValue;
+	for(int i = 15; i >= 0; i--)
+	{
+		uint16_t bit = wValue >> i;
+		bit &= 1;
+		if(bit == 1)
+			serialWrite('1');
+		else
+			serialWrite('0');
+	}
+
+	serialWrite(' ');
+	serialWrite('\n');
+	serialWrite('\r');*/
+
 	/* Process UFI specific control requests */
 	switch (USB_ControlRequest.bRequest)
 	{
@@ -220,7 +197,7 @@ void MassStorage_Task(void)
 		  Endpoint_SelectEndpoint(MASS_STORAGE_IN_EPADDR);
 
 		/* Decode the received SCSI command, set returned status code */
-		//CommandStatus.Status = SCSI_DecodeSCSICommand() ? MS_SCSI_COMMAND_Pass : MS_SCSI_COMMAND_Fail;
+		CommandStatus.Status = SCSI_DecodeSCSICommand() ? MS_SCSI_COMMAND_Pass : MS_SCSI_COMMAND_Fail;
 
 		/* Load in the CBW tag into the CSW to link them together */
 		CommandStatus.Tag = CommandBlock.Tag;
@@ -264,34 +241,34 @@ void MassStorage_Task(void)
  *  \return Boolean \c true if a valid command block has been read in from the endpoint, \c false otherwise
  */
 static bool ReadInCommandBlock(void)
-{/*
+{
 	uint16_t BytesTransferred;
 
-	/* Select the Data Out endpoint 
+	/* Select the Data Out endpoint */
 	Endpoint_SelectEndpoint(MASS_STORAGE_OUT_EPADDR);
 
-	/* Abort if no command has been sent from the host 
+	/* Abort if no command has been sent from the host */
 	if (!(Endpoint_IsOUTReceived()))
 	  return false;
 
-	/* Read in command block header 
+	/* Read in command block header */
 	BytesTransferred = 0;
 	while (Endpoint_Read_Stream_LE(&CommandBlock, (sizeof(CommandBlock) - sizeof(CommandBlock.SCSICommandData)),
 	                               &BytesTransferred) == ENDPOINT_RWSTREAM_IncompleteTransfer)
 	{
-		/* Check if the current command is being aborted by the host 
+		/* Check if the current command is being aborted by the host */
 		if (IsMassStoreReset)
 		  return false;
 	}
 
-	/* Verify the command block - abort if invalid 
+	/* Verify the command block - abort if invalid */
 	if ((CommandBlock.Signature         != MS_CBW_SIGNATURE) ||
 	    (CommandBlock.LUN               >= TOTAL_LUNS)       ||
 		(CommandBlock.Flags              & 0x1F)             ||
 		(CommandBlock.SCSICommandLength == 0)                ||
 		(CommandBlock.SCSICommandLength >  sizeof(CommandBlock.SCSICommandData)))
 	{
-		/* Stall both data pipes until reset by host 
+		/* Stall both data pipes until reset by host */
 		Endpoint_StallTransaction();
 		Endpoint_SelectEndpoint(MASS_STORAGE_IN_EPADDR);
 		Endpoint_StallTransaction();
@@ -299,19 +276,21 @@ static bool ReadInCommandBlock(void)
 		return false;
 	}
 
-	/* Read in command block command data 
+	//serialWriteArray(msg, 21);
+
+	/* Read in command block command data */
 	BytesTransferred = 0;
 	while (Endpoint_Read_Stream_LE(&CommandBlock.SCSICommandData, CommandBlock.SCSICommandLength,
 	                               &BytesTransferred) == ENDPOINT_RWSTREAM_IncompleteTransfer)
 	{
-		/* Check if the current command is being aborted by the host 
+		/* Check if the current command is being aborted by the host */
 		if (IsMassStoreReset)
 		  return false;
 	}
 
-	/* Finalize the stream transfer to send the last packet 
+	/* Finalize the stream transfer to send the last packet */
 	Endpoint_ClearOUT();
-*/
+
 	return true;
 }
 

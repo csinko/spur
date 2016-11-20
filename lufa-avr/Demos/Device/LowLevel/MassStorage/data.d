@@ -1,13 +1,12 @@
-MassStorage.o: MassStorage.c MassStorage.h Descriptors.h \
+data.o: data.c data.h ../../../../LUFA/../LUFA/Common/Common.h \
+ ../../../../LUFA/../LUFA/Common/Architectures.h \
+ ../../../../LUFA/../LUFA/Common/BoardTypes.h \
+ ../../../../LUFA/../LUFA/Common/ArchitectureSpecific.h \
+ ../../../../LUFA/../LUFA/Common/CompilerSpecific.h \
+ ../../../../LUFA/../LUFA/Common/Attributes.h Config/LUFAConfig.h \
+ ../../../../LUFA/../LUFA/Common/Endianness.h \
  ../../../../LUFA/../LUFA/Drivers/USB/USB.h \
  ../../../../LUFA/../LUFA/Drivers/USB/../../Common/Common.h \
- ../../../../LUFA/../LUFA/Drivers/USB/../../Common/Architectures.h \
- ../../../../LUFA/../LUFA/Drivers/USB/../../Common/BoardTypes.h \
- ../../../../LUFA/../LUFA/Drivers/USB/../../Common/ArchitectureSpecific.h \
- ../../../../LUFA/../LUFA/Drivers/USB/../../Common/CompilerSpecific.h \
- ../../../../LUFA/../LUFA/Drivers/USB/../../Common/Attributes.h \
- Config/LUFAConfig.h \
- ../../../../LUFA/../LUFA/Drivers/USB/../../Common/Endianness.h \
  ../../../../LUFA/../LUFA/Drivers/USB/Core/USBMode.h \
  ../../../../LUFA/../LUFA/Drivers/USB/Core/../../../Common/Common.h \
  ../../../../LUFA/../LUFA/Drivers/USB/Core/USBTask.h \
@@ -90,38 +89,38 @@ MassStorage.o: MassStorage.c MassStorage.h Descriptors.h \
  ../../../../LUFA/../LUFA/Drivers/USB/Class/Device/../Common/RNDISClassCommon.h \
  ../../../../LUFA/../LUFA/Drivers/USB/Class/Device/../Common/CDCClassCommon.h \
  ../../../../LUFA/../LUFA/Drivers/USB/Class/StillImageClass.h \
- Config/AppConfig.h serial.h Lib/SCSI.h \
- ../../../../LUFA/../LUFA/Common/Common.h \
+ Config/../MassStorage.h Config/../Descriptors.h \
+ Config/../Config/AppConfig.h Config/../serial.h Config/../Lib/SCSI.h \
  ../../../../LUFA/../LUFA/Drivers/Board/LEDs.h \
  ../../../../LUFA/../LUFA/Drivers/Board/../../Common/Common.h \
  ../../../../LUFA/../LUFA/Drivers/Board/AVR8/LEONARDO/LEDs.h \
  ../../../../LUFA/../LUFA/Drivers/Board/AVR8/LEONARDO/../../../../Common/Common.h \
- Lib/../serial.h Lib/../data.h Config/../MassStorage.h \
- Lib/../MassStorage.h Lib/../Descriptors.h \
+ Config/../Lib/../serial.h Config/../Lib/../data.h \
+ Config/../Lib/../MassStorage.h Config/../Lib/../Descriptors.h \
  ../../../../LUFA/../LUFA/Platform/Platform.h \
  ../../../../LUFA/../LUFA/Platform/../Common/Common.h
 
-MassStorage.h:
+data.h:
 
-Descriptors.h:
+../../../../LUFA/../LUFA/Common/Common.h:
+
+../../../../LUFA/../LUFA/Common/Architectures.h:
+
+../../../../LUFA/../LUFA/Common/BoardTypes.h:
+
+../../../../LUFA/../LUFA/Common/ArchitectureSpecific.h:
+
+../../../../LUFA/../LUFA/Common/CompilerSpecific.h:
+
+../../../../LUFA/../LUFA/Common/Attributes.h:
+
+Config/LUFAConfig.h:
+
+../../../../LUFA/../LUFA/Common/Endianness.h:
 
 ../../../../LUFA/../LUFA/Drivers/USB/USB.h:
 
 ../../../../LUFA/../LUFA/Drivers/USB/../../Common/Common.h:
-
-../../../../LUFA/../LUFA/Drivers/USB/../../Common/Architectures.h:
-
-../../../../LUFA/../LUFA/Drivers/USB/../../Common/BoardTypes.h:
-
-../../../../LUFA/../LUFA/Drivers/USB/../../Common/ArchitectureSpecific.h:
-
-../../../../LUFA/../LUFA/Drivers/USB/../../Common/CompilerSpecific.h:
-
-../../../../LUFA/../LUFA/Drivers/USB/../../Common/Attributes.h:
-
-Config/LUFAConfig.h:
-
-../../../../LUFA/../LUFA/Drivers/USB/../../Common/Endianness.h:
 
 ../../../../LUFA/../LUFA/Drivers/USB/Core/USBMode.h:
 
@@ -287,13 +286,15 @@ Config/LUFAConfig.h:
 
 ../../../../LUFA/../LUFA/Drivers/USB/Class/StillImageClass.h:
 
-Config/AppConfig.h:
+Config/../MassStorage.h:
 
-serial.h:
+Config/../Descriptors.h:
 
-Lib/SCSI.h:
+Config/../Config/AppConfig.h:
 
-../../../../LUFA/../LUFA/Common/Common.h:
+Config/../serial.h:
+
+Config/../Lib/SCSI.h:
 
 ../../../../LUFA/../LUFA/Drivers/Board/LEDs.h:
 
@@ -303,15 +304,13 @@ Lib/SCSI.h:
 
 ../../../../LUFA/../LUFA/Drivers/Board/AVR8/LEONARDO/../../../../Common/Common.h:
 
-Lib/../serial.h:
+Config/../Lib/../serial.h:
 
-Lib/../data.h:
+Config/../Lib/../data.h:
 
-Config/../MassStorage.h:
+Config/../Lib/../MassStorage.h:
 
-Lib/../MassStorage.h:
-
-Lib/../Descriptors.h:
+Config/../Lib/../Descriptors.h:
 
 ../../../../LUFA/../LUFA/Platform/Platform.h:
 

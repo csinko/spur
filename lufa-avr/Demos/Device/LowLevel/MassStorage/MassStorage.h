@@ -44,7 +44,8 @@
 
 		#include "Descriptors.h"
 
-		//#include "Lib/SCSI.h"
+		#include "serial.h"
+		#include "Lib/SCSI.h"
 		//#include "Lib/DataflashManager.h"
 		#include "Config/AppConfig.h"
 
@@ -75,10 +76,6 @@
 		extern volatile bool             IsMassStoreReset;
 
 	/* Function Prototypes: */
-		void serialBegin(void);
-		void serialWrite( unsigned char* data );
-		void serialWriteArray( unsigned char data[], unsigned int len);
-
 		void SetupHardware(void);
 		void MassStorage_Task(void);
 
