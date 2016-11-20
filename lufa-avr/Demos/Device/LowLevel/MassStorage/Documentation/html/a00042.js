@@ -1,0 +1,26 @@
+var a00042 =
+[
+    [ "AdditionalLength", "a00042.html#a6a01d51171f4b2d51aa4282d3491e525", null ],
+    [ "AERC", "a00042.html#a183a95f4c3cc30cb790416f71973c706", null ],
+    [ "CmdQue", "a00042.html#adda38e4b1a349c6522fa501a79863b31", null ],
+    [ "DeviceType", "a00042.html#ad9999f598161db8a1e0688cb294247ac", null ],
+    [ "Linked", "a00042.html#a7eeb7d58fcd9f417a8206ec101760aab", null ],
+    [ "NormACA", "a00042.html#af260db30f44cc475a220674273c26f22", null ],
+    [ "PeripheralQualifier", "a00042.html#a4e903f057638f7dffa8a2e939dafc8ca", null ],
+    [ "ProductID", "a00042.html#a56808101e4fbb04ff6272ada57bfeecc", null ],
+    [ "RelAddr", "a00042.html#ae5c5b9bf7d51f70147ce66b2264466d1", null ],
+    [ "Removable", "a00042.html#a40eced68aab42c604cbbc644933fd23d", null ],
+    [ "Reserved", "a00042.html#ad444ed9c4ac5301ad3be99156801b559", null ],
+    [ "Reserved2", "a00042.html#aa7975c58c98f6501ea412d3126471d5c", null ],
+    [ "Reserved3", "a00042.html#a035f1b5ff99d621c53765d383afb5fa1", null ],
+    [ "Reserved4", "a00042.html#a53f02f593bcdf15f895939992972128d", null ],
+    [ "ResponseDataFormat", "a00042.html#ab2797b4bc223fb468586da80f4179f6c", null ],
+    [ "RevisionID", "a00042.html#a072c18413ad0f69ef083ff7151fc2157", null ],
+    [ "SoftReset", "a00042.html#a9f95bf1364110f0957fe04dca110f7fa", null ],
+    [ "Sync", "a00042.html#a806185394e1797b5d9c7a4fefe581dd0", null ],
+    [ "TrmTsk", "a00042.html#ae326d0db3760d3bdb1d1481860caf3f4", null ],
+    [ "VendorID", "a00042.html#a8398e4209b2a57f393c785817fb7f015", null ],
+    [ "Version", "a00042.html#a9dbc3ec1b22a51076db06e500665c01b", null ],
+    [ "WideBus16Bit", "a00042.html#a2c5332406d26280097504c9c97e9f2ae", null ],
+    [ "WideBus32Bit", "a00042.html#a86addd1154418b778b8d777f5c98387c", null ]
+];
