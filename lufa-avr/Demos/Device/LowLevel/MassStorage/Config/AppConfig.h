@@ -44,7 +44,7 @@
 #define _APP_CONFIG_H_
 
 	#define TOTAL_LUNS                1
-  #define LUN_MEDIA_BLOCKS 1
+  #define LUN_MEDIA_BLOCKS        8388608
 	#define DISK_READ_ONLY            true
   #define VIRTUAL_MEMORY_BLOCK_SIZE           512
 

@@ -94,9 +94,10 @@ Lib/SCSI.o: Lib/SCSI.c Lib/SCSI.h \
  ../../../../LUFA/../LUFA/Drivers/Board/../../Common/Common.h \
  ../../../../LUFA/../LUFA/Drivers/Board/AVR8/LEONARDO/LEDs.h \
  ../../../../LUFA/../LUFA/Drivers/Board/AVR8/LEONARDO/../../../../Common/Common.h \
- Lib/../serial.h Lib/../data.h Config/../MassStorage.h \
- Config/../Descriptors.h Config/../Config/AppConfig.h Config/../serial.h \
- Config/../Lib/SCSI.h ../../../../LUFA/../LUFA/Platform/Platform.h \
+ Lib/../serial.h Lib/../data.h Lib/../MassStorage.h Lib/../Descriptors.h \
+ Lib/../Config/AppConfig.h Lib/../serial.h Lib/../Lib/SCSI.h \
+ Lib/../Lib/sd_raw.h Lib/../Lib/sd_raw_config.h \
+ Lib/../Lib/sd_raw_config.h ../../../../LUFA/../LUFA/Platform/Platform.h \
  ../../../../LUFA/../LUFA/Platform/../Common/Common.h \
  Lib/../MassStorage.h Lib/../Descriptors.h
 
@@ -298,15 +299,21 @@ Lib/../serial.h:
 
 Lib/../data.h:
 
-Config/../MassStorage.h:
+Lib/../MassStorage.h:
 
-Config/../Descriptors.h:
+Lib/../Descriptors.h:
 
-Config/../Config/AppConfig.h:
+Lib/../Config/AppConfig.h:
 
-Config/../serial.h:
+Lib/../serial.h:
 
-Config/../Lib/SCSI.h:
+Lib/../Lib/SCSI.h:
+
+Lib/../Lib/sd_raw.h:
+
+Lib/../Lib/sd_raw_config.h:
+
+Lib/../Lib/sd_raw_config.h:
 
 ../../../../LUFA/../LUFA/Platform/Platform.h:
 

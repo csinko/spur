@@ -12,11 +12,16 @@ volatile bool IsMassStoreReset = false;
 
 unsigned char serialmsg[] = {'T', 'e', 's', 't'};
 unsigned char hexLookup[] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'F'};
-unsigned char msg[] = {'d', 'a', 't', 'a', ' ', 'a', 't', ' ', 'o', 'u', 't', ' ', 'e', 'n', 'd', 'p', 'o', 'i', 'n', 't', '\n'};
-
+unsigned char sderrormsg[] = {'s', 'd', ' ', 'c', 'a', 'r', 'd', ' ', 'i', 'n', 'i', 't', ' ', 'e', 'r', 'r', 'o', 'r', '\n', '\r'};
 int main(void)
 {
 	serialBegin();
+	if(!sd_raw_init())
+	{
+		LEDs_SetAllLEDs(LEDMASK_USB_ERROR);
+		serialWriteArray(sderrormsg, 20);
+		for (;;) ;
+	}
 
 	SetupHardware();
 

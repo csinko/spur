@@ -96,9 +96,10 @@ MassStorage.o: MassStorage.c MassStorage.h Descriptors.h \
  ../../../../LUFA/../LUFA/Drivers/Board/../../Common/Common.h \
  ../../../../LUFA/../LUFA/Drivers/Board/AVR8/LEONARDO/LEDs.h \
  ../../../../LUFA/../LUFA/Drivers/Board/AVR8/LEONARDO/../../../../Common/Common.h \
- Lib/../serial.h Lib/../data.h Config/../MassStorage.h \
- Lib/../MassStorage.h Lib/../Descriptors.h \
- ../../../../LUFA/../LUFA/Platform/Platform.h \
+ Lib/../serial.h Lib/../data.h Lib/../MassStorage.h Lib/../Lib/sd_raw.h \
+ Lib/../Lib/sd_raw_config.h Lib/../Lib/sd_raw_config.h \
+ Lib/../MassStorage.h Lib/../Descriptors.h Lib/sd_raw.h \
+ Lib/sd_raw_config.h ../../../../LUFA/../LUFA/Platform/Platform.h \
  ../../../../LUFA/../LUFA/Platform/../Common/Common.h
 
 MassStorage.h:
@@ -307,11 +308,21 @@ Lib/../serial.h:
 
 Lib/../data.h:
 
-Config/../MassStorage.h:
+Lib/../MassStorage.h:
+
+Lib/../Lib/sd_raw.h:
+
+Lib/../Lib/sd_raw_config.h:
+
+Lib/../Lib/sd_raw_config.h:
 
 Lib/../MassStorage.h:
 
 Lib/../Descriptors.h:
+
+Lib/sd_raw.h:
+
+Lib/sd_raw_config.h:
 
 ../../../../LUFA/../LUFA/Platform/Platform.h:
 

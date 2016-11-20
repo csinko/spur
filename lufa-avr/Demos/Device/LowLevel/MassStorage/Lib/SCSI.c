@@ -214,12 +214,10 @@ static bool SCSI_Command_Request_Sense(void)
 static bool SCSI_Command_Read_Capacity_10(void)
 {
 	/* Send the total number of logical blocks in the current LUN */
-	//Endpoint_Write_32_BE(LUN_MEDIA_BLOCKS - 1);
-	Endpoint_Write_32_BE(10);
+	Endpoint_Write_32_BE(LUN_MEDIA_BLOCKS - 1);
 
 	/* Send the logical block size of the device (must be 512 bytes) */
-	//Endpoint_Write_32_BE(VIRTUAL_MEMORY_BLOCK_SIZE);
-	Endpoint_Write_32_BE(1024);
+	Endpoint_Write_32_BE(VIRTUAL_MEMORY_BLOCK_SIZE);
 
 	/* Check if the current command is being aborted by the host */
 	if (IsMassStoreReset)
@@ -310,18 +308,6 @@ static bool SCSI_Command_ReadWrite_10(const bool IsDataRead)
 
 		return false;
 	}
-
-	for(int i = 32; i >= 0; i--)
-	{
-		uint8_t bit = BlockAddress >> i;
-		bit &= 1;
-		if(bit == 1)
-			serialWrite('1');
-		else
-			serialWrite('0');
-	}
-	serialWrite('\n');
-	serialWrite('\r');
 
 	// read command
 	readData(BlockAddress, TotalBlocks);

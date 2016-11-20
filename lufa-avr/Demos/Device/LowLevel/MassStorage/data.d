@@ -89,15 +89,15 @@ data.o: data.c data.h ../../../../LUFA/../LUFA/Common/Common.h \
  ../../../../LUFA/../LUFA/Drivers/USB/Class/Device/../Common/RNDISClassCommon.h \
  ../../../../LUFA/../LUFA/Drivers/USB/Class/Device/../Common/CDCClassCommon.h \
  ../../../../LUFA/../LUFA/Drivers/USB/Class/StillImageClass.h \
- Config/../MassStorage.h Config/../Descriptors.h \
- Config/../Config/AppConfig.h Config/../serial.h Config/../Lib/SCSI.h \
+ MassStorage.h Descriptors.h Config/AppConfig.h serial.h Lib/SCSI.h \
  ../../../../LUFA/../LUFA/Drivers/Board/LEDs.h \
  ../../../../LUFA/../LUFA/Drivers/Board/../../Common/Common.h \
  ../../../../LUFA/../LUFA/Drivers/Board/AVR8/LEONARDO/LEDs.h \
  ../../../../LUFA/../LUFA/Drivers/Board/AVR8/LEONARDO/../../../../Common/Common.h \
- Config/../Lib/../serial.h Config/../Lib/../data.h \
- Config/../Lib/../MassStorage.h Config/../Lib/../Descriptors.h \
- ../../../../LUFA/../LUFA/Platform/Platform.h \
+ Lib/../serial.h Lib/../data.h Lib/../MassStorage.h Lib/../Lib/sd_raw.h \
+ Lib/../Lib/sd_raw_config.h Lib/../Lib/sd_raw_config.h \
+ Lib/../MassStorage.h Lib/../Descriptors.h Lib/sd_raw.h \
+ Lib/sd_raw_config.h ../../../../LUFA/../LUFA/Platform/Platform.h \
  ../../../../LUFA/../LUFA/Platform/../Common/Common.h
 
 data.h:
@@ -286,15 +286,15 @@ Config/LUFAConfig.h:
 
 ../../../../LUFA/../LUFA/Drivers/USB/Class/StillImageClass.h:
 
-Config/../MassStorage.h:
+MassStorage.h:
 
-Config/../Descriptors.h:
+Descriptors.h:
 
-Config/../Config/AppConfig.h:
+Config/AppConfig.h:
 
-Config/../serial.h:
+serial.h:
 
-Config/../Lib/SCSI.h:
+Lib/SCSI.h:
 
 ../../../../LUFA/../LUFA/Drivers/Board/LEDs.h:
 
@@ -304,13 +304,25 @@ Config/../Lib/SCSI.h:
 
 ../../../../LUFA/../LUFA/Drivers/Board/AVR8/LEONARDO/../../../../Common/Common.h:
 
-Config/../Lib/../serial.h:
+Lib/../serial.h:
 
-Config/../Lib/../data.h:
+Lib/../data.h:
 
-Config/../Lib/../MassStorage.h:
+Lib/../MassStorage.h:
 
-Config/../Lib/../Descriptors.h:
+Lib/../Lib/sd_raw.h:
+
+Lib/../Lib/sd_raw_config.h:
+
+Lib/../Lib/sd_raw_config.h:
+
+Lib/../MassStorage.h:
+
+Lib/../Descriptors.h:
+
+Lib/sd_raw.h:
+
+Lib/sd_raw_config.h:
 
 ../../../../LUFA/../LUFA/Platform/Platform.h:
 

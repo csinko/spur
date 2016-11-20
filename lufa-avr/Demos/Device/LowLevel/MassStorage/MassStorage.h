@@ -48,6 +48,8 @@
 		#include "Lib/SCSI.h"
 		//#include "Lib/DataflashManager.h"
 		#include "Config/AppConfig.h"
+		#include "Lib/sd_raw.h"
+		#include "Lib/sd_raw_config.h"
 
 		#include <LUFA/Drivers/USB/USB.h>
 		#include <LUFA/Drivers/Board/LEDs.h>
