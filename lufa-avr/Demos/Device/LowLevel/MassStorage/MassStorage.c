@@ -16,6 +16,7 @@ unsigned char sderrormsg[] = {'s', 'd', ' ', 'c', 'a', 'r', 'd', ' ', 'i', 'n', 
 int main(void)
 {
 	serialBegin();
+	
 	if(!sd_raw_init())
 	{
 		LEDs_SetAllLEDs(LEDMASK_USB_ERROR);

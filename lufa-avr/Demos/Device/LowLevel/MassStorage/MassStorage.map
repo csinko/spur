@@ -1,11 +1,57 @@
 Archive member included to satisfy reference by file (symbol)
 
+/usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(fixunssfsi.o)
+                              data.o (__fixunssfsi)
+/usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(floatsisf.o)
+                              data.o (__floatsisf)
+/usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(fp_split3.o)
+                              /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(fixunssfsi.o) (__fp_splitA)
+/usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(fp_zero.o)
+                              /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(fixunssfsi.o) (__fp_zero)
+/usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(pow.o)
+                              data.o (pow)
+/usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(exp.o)
+                              /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(pow.o) (exp)
+/usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(fp_inf.o)
+                              /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(exp.o) (__fp_inf)
+/usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(fp_nan.o)
+                              /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(pow.o) (__fp_nan)
+/usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(fp_powser.o)
+                              /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(exp.o) (__fp_powser)
+/usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(inverse.o)
+                              /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(exp.o) (inverse)
+/usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(ldexp.o)
+                              /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(exp.o) (ldexp)
+/usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(log.o)
+                              /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(pow.o) (log)
+/usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(modf.o)
+                              /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(exp.o) (modf)
+/usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(mulsf3.o)
+                              /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(pow.o) (__mulsf3)
+/usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(mulsf3x.o)
+                              /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(fp_powser.o) (__mulsf3x)
+/usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(addsf3.o)
+                              /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(modf.o) (__subsf3)
+/usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(addsf3x.o)
+                              /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(fp_powser.o) (__addsf3x)
+/usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(divsf3.o)
+                              /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(inverse.o) (__divsf3)
+/usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(divsf3x.o)
+                              /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(divsf3.o) (__divsf3x)
+/usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(fp_mpack.o)
+                              /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(ldexp.o) (__fp_mpack)
+/usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(fp_pscA.o)
+                              /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(mulsf3x.o) (__fp_pscA)
+/usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(fp_pscB.o)
+                              /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(mulsf3x.o) (__fp_pscB)
+/usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(fp_round.o)
+                              /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(log.o) (__fp_round)
 /usr/lib/gcc/avr/6.2.0/avr5/libgcc.a(_mulsi3.o)
                               Lib/fat.o (__mulsi3)
 /usr/lib/gcc/avr/6.2.0/avr5/libgcc.a(_udivmodhi4.o)
                               Lib/fat.o (__udivmodhi4)
 /usr/lib/gcc/avr/6.2.0/avr5/libgcc.a(_udivmodsi4.o)
-                              Lib/fat.o (__udivmodsi4)
+                              data.o (__udivmodsi4)
 /usr/lib/gcc/avr/6.2.0/avr5/libgcc.a(_exit.o)
                               /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/crtatmega32u4.o (exit)
 /usr/lib/gcc/avr/6.2.0/avr5/libgcc.a(_copy_data.o)
@@ -73,7 +119,6 @@ Discarded input sections
  .data          0x0000000000000000        0x0 serial.o
  .bss           0x0000000000000000        0x0 serial.o
  .text          0x0000000000000000        0x0 data.o
- .data          0x0000000000000000       0x3a data.o
  .bss           0x0000000000000000        0x0 data.o
  .text          0x0000000000000000        0x0 Lib/SCSI.o
  .bss           0x0000000000000000        0x0 Lib/SCSI.o
@@ -328,6 +373,75 @@ Discarded input sections
  .text          0x0000000000000000        0x0 ../../../../LUFA/Drivers/USB/Core/USBTask.o
  .data          0x0000000000000000        0x0 ../../../../LUFA/Drivers/USB/Core/USBTask.o
  .bss           0x0000000000000000        0x0 ../../../../LUFA/Drivers/USB/Core/USBTask.o
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(fixunssfsi.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(fixunssfsi.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(fixunssfsi.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(floatsisf.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(floatsisf.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(floatsisf.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(fp_split3.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(fp_split3.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(fp_split3.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(fp_zero.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(fp_zero.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(fp_zero.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(pow.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(pow.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(pow.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(exp.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(exp.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(exp.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(fp_inf.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(fp_inf.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(fp_inf.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(fp_nan.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(fp_nan.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(fp_nan.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(fp_powser.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(fp_powser.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(fp_powser.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(inverse.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(inverse.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(inverse.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(ldexp.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(ldexp.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(ldexp.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(log.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(log.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(log.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(modf.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(modf.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(modf.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(mulsf3.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(mulsf3.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(mulsf3.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(mulsf3x.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(mulsf3x.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(mulsf3x.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(addsf3.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(addsf3.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(addsf3.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(addsf3x.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(addsf3x.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(addsf3x.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(divsf3.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(divsf3.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(divsf3.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(divsf3x.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(divsf3x.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(divsf3x.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(fp_mpack.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(fp_mpack.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(fp_mpack.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(fp_pscA.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(fp_pscA.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(fp_pscA.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(fp_pscB.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(fp_pscB.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(fp_pscB.o)
+ .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(fp_round.o)
+ .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(fp_round.o)
+ .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(fp_round.o)
  .text          0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/avr5/libgcc.a(_mulsi3.o)
  .data          0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/avr5/libgcc.a(_mulsi3.o)
  .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/avr5/libgcc.a(_mulsi3.o)
@@ -365,8 +479,6 @@ Discarded input sections
  .bss           0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/avr5/libgcc.a(_udivmodsi4.o)
  .text.libgcc.mul
                 0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/avr5/libgcc.a(_udivmodsi4.o)
- .text.libgcc.div
-                0x0000000000000000       0x44 /usr/lib/gcc/avr/6.2.0/avr5/libgcc.a(_udivmodsi4.o)
  .text.libgcc   0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/avr5/libgcc.a(_udivmodsi4.o)
  .text.libgcc.prologue
                 0x0000000000000000        0x0 /usr/lib/gcc/avr/6.2.0/avr5/libgcc.a(_udivmodsi4.o)
@@ -779,57 +891,61 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x0000000000000000     0x172c
+.text           0x0000000000000000     0x1fce
  *(.vectors)
  .vectors       0x0000000000000000       0xac /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/crtatmega32u4.o
                 0x0000000000000000                __vectors
                 0x0000000000000000                __vector_default
  *(.vectors)
  *(.progmem.gcc*)
-                0x00000000000000ac                . = ALIGN (0x2)
-                0x00000000000000ac                __trampolines_start = .
+ .progmem.gcc_fplib
+                0x00000000000000ac       0x28 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(exp.o)
+ .progmem.gcc_fplib
+                0x00000000000000d4       0x5a /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(log.o)
+                0x000000000000012e                . = ALIGN (0x2)
+                0x000000000000012e                __trampolines_start = .
  *(.trampolines)
- .trampolines   0x00000000000000ac        0x0 linker stubs
+ .trampolines   0x000000000000012e        0x0 linker stubs
  *(.trampolines*)
-                0x00000000000000ac                __trampolines_end = .
+                0x000000000000012e                __trampolines_end = .
  *libprintf_flt.a:*(.progmem.data)
  *libc.a:*(.progmem.data)
  *(.progmem*)
- .progmem.data  0x00000000000000ac       0x70 Descriptors.o
-                0x00000000000000ac                ProductString
-                0x00000000000000da                ManufacturerString
-                0x00000000000000e6                LanguageString
-                0x00000000000000ea                ConfigurationDescriptor
-                0x000000000000010a                DeviceDescriptor
-                0x000000000000011c                . = ALIGN (0x2)
+ .progmem.data  0x000000000000012e       0x70 Descriptors.o
+                0x000000000000012e                ProductString
+                0x000000000000015c                ManufacturerString
+                0x0000000000000168                LanguageString
+                0x000000000000016c                ConfigurationDescriptor
+                0x000000000000018c                DeviceDescriptor
+                0x000000000000019e                . = ALIGN (0x2)
  *(.jumptables)
  *(.jumptables*)
  *(.lowtext)
  *(.lowtext*)
-                0x000000000000011c                __ctors_start = .
+                0x000000000000019e                __ctors_start = .
  *(.ctors)
-                0x000000000000011c                __ctors_end = .
-                0x000000000000011c                __dtors_start = .
+                0x000000000000019e                __ctors_end = .
+                0x000000000000019e                __dtors_start = .
  *(.dtors)
-                0x000000000000011c                __dtors_end = .
+                0x000000000000019e                __dtors_end = .
  SORT(*)(.ctors)
  SORT(*)(.dtors)
  *(.init0)
- .init0         0x000000000000011c        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/crtatmega32u4.o
-                0x000000000000011c                __init
+ .init0         0x000000000000019e        0x0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/crtatmega32u4.o
+                0x000000000000019e                __init
  *(.init0)
  *(.init1)
  *(.init1)
  *(.init2)
- .init2         0x000000000000011c        0xc /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/crtatmega32u4.o
+ .init2         0x000000000000019e        0xc /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/crtatmega32u4.o
  *(.init2)
  *(.init3)
  *(.init3)
  *(.init4)
- .init4         0x0000000000000128       0x16 /usr/lib/gcc/avr/6.2.0/avr5/libgcc.a(_copy_data.o)
-                0x0000000000000128                __do_copy_data
- .init4         0x000000000000013e       0x10 /usr/lib/gcc/avr/6.2.0/avr5/libgcc.a(_clear_bss.o)
-                0x000000000000013e                __do_clear_bss
+ .init4         0x00000000000001aa       0x16 /usr/lib/gcc/avr/6.2.0/avr5/libgcc.a(_copy_data.o)
+                0x00000000000001aa                __do_copy_data
+ .init4         0x00000000000001c0       0x10 /usr/lib/gcc/avr/6.2.0/avr5/libgcc.a(_clear_bss.o)
+                0x00000000000001c0                __do_clear_bss
  *(.init4)
  *(.init5)
  *(.init5)
@@ -840,179 +956,259 @@ END GROUP
  *(.init8)
  *(.init8)
  *(.init9)
- .init9         0x000000000000014e        0x6 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/crtatmega32u4.o
+ .init9         0x00000000000001d0        0x6 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/crtatmega32u4.o
  *(.init9)
  *(.text)
- .text          0x0000000000000154        0x2 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/crtatmega32u4.o
-                0x0000000000000154                __vector_38
-                0x0000000000000154                __vector_22
-                0x0000000000000154                __vector_28
-                0x0000000000000154                __vector_1
-                0x0000000000000154                __vector_32
-                0x0000000000000154                __vector_34
-                0x0000000000000154                __vector_24
-                0x0000000000000154                __vector_12
-                0x0000000000000154                __bad_interrupt
-                0x0000000000000154                __vector_6
-                0x0000000000000154                __vector_31
-                0x0000000000000154                __vector_35
-                0x0000000000000154                __vector_39
-                0x0000000000000154                __vector_3
-                0x0000000000000154                __vector_23
-                0x0000000000000154                __vector_30
-                0x0000000000000154                __vector_25
-                0x0000000000000154                __vector_13
-                0x0000000000000154                __vector_17
-                0x0000000000000154                __vector_19
-                0x0000000000000154                __vector_7
-                0x0000000000000154                __vector_41
-                0x0000000000000154                __vector_27
-                0x0000000000000154                __vector_5
-                0x0000000000000154                __vector_33
-                0x0000000000000154                __vector_37
-                0x0000000000000154                __vector_4
-                0x0000000000000154                __vector_9
-                0x0000000000000154                __vector_2
-                0x0000000000000154                __vector_21
-                0x0000000000000154                __vector_15
-                0x0000000000000154                __vector_36
-                0x0000000000000154                __vector_29
-                0x0000000000000154                __vector_40
-                0x0000000000000154                __vector_8
-                0x0000000000000154                __vector_26
-                0x0000000000000154                __vector_14
-                0x0000000000000154                __vector_16
-                0x0000000000000154                __vector_18
-                0x0000000000000154                __vector_20
-                0x0000000000000154                __vector_42
-                0x0000000000000156                . = ALIGN (0x2)
+ .text          0x00000000000001d6        0x2 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/crtatmega32u4.o
+                0x00000000000001d6                __vector_38
+                0x00000000000001d6                __vector_22
+                0x00000000000001d6                __vector_28
+                0x00000000000001d6                __vector_1
+                0x00000000000001d6                __vector_32
+                0x00000000000001d6                __vector_34
+                0x00000000000001d6                __vector_24
+                0x00000000000001d6                __vector_12
+                0x00000000000001d6                __bad_interrupt
+                0x00000000000001d6                __vector_6
+                0x00000000000001d6                __vector_31
+                0x00000000000001d6                __vector_35
+                0x00000000000001d6                __vector_39
+                0x00000000000001d6                __vector_3
+                0x00000000000001d6                __vector_23
+                0x00000000000001d6                __vector_30
+                0x00000000000001d6                __vector_25
+                0x00000000000001d6                __vector_13
+                0x00000000000001d6                __vector_17
+                0x00000000000001d6                __vector_19
+                0x00000000000001d6                __vector_7
+                0x00000000000001d6                __vector_41
+                0x00000000000001d6                __vector_27
+                0x00000000000001d6                __vector_5
+                0x00000000000001d6                __vector_33
+                0x00000000000001d6                __vector_37
+                0x00000000000001d6                __vector_4
+                0x00000000000001d6                __vector_9
+                0x00000000000001d6                __vector_2
+                0x00000000000001d6                __vector_21
+                0x00000000000001d6                __vector_15
+                0x00000000000001d6                __vector_36
+                0x00000000000001d6                __vector_29
+                0x00000000000001d6                __vector_40
+                0x00000000000001d6                __vector_8
+                0x00000000000001d6                __vector_26
+                0x00000000000001d6                __vector_14
+                0x00000000000001d6                __vector_16
+                0x00000000000001d6                __vector_18
+                0x00000000000001d6                __vector_20
+                0x00000000000001d6                __vector_42
+                0x00000000000001d8                . = ALIGN (0x2)
  *(.text.*)
  .text.LEDs_SetAllLEDs
-                0x0000000000000156       0x28 MassStorage.o
+                0x00000000000001d8       0x28 MassStorage.o
  .text.SetupHardware
-                0x000000000000017e       0x3c MassStorage.o
-                0x000000000000017e                SetupHardware
+                0x0000000000000200       0x3e MassStorage.o
+                0x0000000000000200                SetupHardware
  .text.EVENT_USB_Device_Connect
-                0x00000000000001ba        0xa MassStorage.o
-                0x00000000000001ba                EVENT_USB_Device_Connect
+                0x000000000000023e        0xa MassStorage.o
+                0x000000000000023e                EVENT_USB_Device_Connect
  .text.EVENT_USB_Device_Disconnect
-                0x00000000000001c4        0x4 MassStorage.o
-                0x00000000000001c4                EVENT_USB_Device_Disconnect
+                0x0000000000000248        0x4 MassStorage.o
+                0x0000000000000248                EVENT_USB_Device_Disconnect
  .text.EVENT_USB_Device_ConfigurationChanged
-                0x00000000000001c8       0x26 MassStorage.o
-                0x00000000000001c8                EVENT_USB_Device_ConfigurationChanged
+                0x000000000000024c       0x26 MassStorage.o
+                0x000000000000024c                EVENT_USB_Device_ConfigurationChanged
  .text.EVENT_USB_Device_ControlRequest
-                0x00000000000001ee       0x4c MassStorage.o
-                0x00000000000001ee                EVENT_USB_Device_ControlRequest
+                0x0000000000000272       0x4c MassStorage.o
+                0x0000000000000272                EVENT_USB_Device_ControlRequest
  .text.MassStorage_Task
-                0x000000000000023a      0x1f6 MassStorage.o
-                0x000000000000023a                MassStorage_Task
+                0x00000000000002be      0x1f6 MassStorage.o
+                0x00000000000002be                MassStorage_Task
  .text.startup.main
-                0x0000000000000430       0x28 MassStorage.o
-                0x0000000000000430                main
+                0x00000000000004b4       0x28 MassStorage.o
+                0x00000000000004b4                main
  .text.CALLBACK_USB_GetDescriptor
-                0x0000000000000458       0x60 Descriptors.o
-                0x0000000000000458                CALLBACK_USB_GetDescriptor
+                0x00000000000004dc       0x60 Descriptors.o
+                0x00000000000004dc                CALLBACK_USB_GetDescriptor
  .text.serialBegin
-                0x00000000000004b8       0x20 serial.o
-                0x00000000000004b8                serialBegin
+                0x000000000000053c       0x20 serial.o
+                0x000000000000053c                serialBegin
  .text.serialWrite
-                0x00000000000004d8        0xe serial.o
-                0x00000000000004d8                serialWrite
+                0x000000000000055c        0xe serial.o
+                0x000000000000055c                serialWrite
  .text.serialWriteArray
-                0x00000000000004e6       0x26 serial.o
-                0x00000000000004e6                serialWriteArray
+                0x000000000000056a       0x26 serial.o
+                0x000000000000056a                serialWriteArray
  .text.readData
-                0x000000000000050c       0xde data.o
-                0x000000000000050c                readData
+                0x0000000000000590      0x214 data.o
+                0x0000000000000590                readData
  .text.SCSI_DecodeSCSICommand
-                0x00000000000005ea      0x2d6 Lib/SCSI.o
-                0x00000000000005ea                SCSI_DecodeSCSICommand
+                0x00000000000007a4      0x2d0 Lib/SCSI.o
+                0x00000000000007a4                SCSI_DecodeSCSICommand
  .text.sd_raw_send_byte
-                0x00000000000008c0       0x10 Lib/sd_raw.o
+                0x0000000000000a74       0x10 Lib/sd_raw.o
  .text.sd_raw_rec_byte
-                0x00000000000008d0       0x14 Lib/sd_raw.o
+                0x0000000000000a84       0x14 Lib/sd_raw.o
  .text.sd_raw_send_command
-                0x00000000000008e4       0x58 Lib/sd_raw.o
+                0x0000000000000a98       0x58 Lib/sd_raw.o
  .text.sd_raw_read
-                0x000000000000093c      0x1fc Lib/sd_raw.o
-                0x000000000000093c                sd_raw_read
+                0x0000000000000af0      0x208 Lib/sd_raw.o
+                0x0000000000000af0                sd_raw_read
  .text.sd_raw_init
-                0x0000000000000b38      0x184 Lib/sd_raw.o
-                0x0000000000000b38                sd_raw_init
+                0x0000000000000cf8      0x184 Lib/sd_raw.o
+                0x0000000000000cf8                sd_raw_init
  .text.Endpoint_Null_Stream
-                0x0000000000000cbc       0x86 ../../../../LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
-                0x0000000000000cbc                Endpoint_Null_Stream
+                0x0000000000000e7c       0x86 ../../../../LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+                0x0000000000000e7c                Endpoint_Null_Stream
  .text.Endpoint_Write_Stream_LE
-                0x0000000000000d42       0x9a ../../../../LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
-                0x0000000000000d42                Endpoint_Write_Stream_LE
+                0x0000000000000f02       0x9a ../../../../LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+                0x0000000000000f02                Endpoint_Write_Stream_LE
  .text.Endpoint_Read_Stream_LE
-                0x0000000000000ddc       0x9a ../../../../LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
-                0x0000000000000ddc                Endpoint_Read_Stream_LE
+                0x0000000000000f9c       0x9a ../../../../LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+                0x0000000000000f9c                Endpoint_Read_Stream_LE
  .text.Endpoint_Write_Control_Stream_LE
-                0x0000000000000e76       0xba ../../../../LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
-                0x0000000000000e76                Endpoint_Write_Control_Stream_LE
+                0x0000000000001036       0xba ../../../../LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+                0x0000000000001036                Endpoint_Write_Control_Stream_LE
  .text.Endpoint_Write_Control_PStream_LE
-                0x0000000000000f30       0xbc ../../../../LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
-                0x0000000000000f30                Endpoint_Write_Control_PStream_LE
+                0x00000000000010f0       0xbc ../../../../LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+                0x00000000000010f0                Endpoint_Write_Control_PStream_LE
  .text.Endpoint_ConfigureEndpoint_Prv
-                0x0000000000000fec       0x6a ../../../../LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
-                0x0000000000000fec                Endpoint_ConfigureEndpoint_Prv
+                0x00000000000011ac       0x6a ../../../../LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
+                0x00000000000011ac                Endpoint_ConfigureEndpoint_Prv
  .text.Endpoint_ClearStatusStage
-                0x0000000000001056       0x3e ../../../../LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
-                0x0000000000001056                Endpoint_ClearStatusStage
+                0x0000000000001216       0x3e ../../../../LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
+                0x0000000000001216                Endpoint_ClearStatusStage
  .text.Endpoint_WaitUntilReady
-                0x0000000000001094       0x5e ../../../../LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
-                0x0000000000001094                Endpoint_WaitUntilReady
+                0x0000000000001254       0x5e ../../../../LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
+                0x0000000000001254                Endpoint_WaitUntilReady
  .text.USB_ResetInterface
-                0x00000000000010f2       0x80 ../../../../LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
-                0x00000000000010f2                USB_ResetInterface
+                0x00000000000012b2       0x80 ../../../../LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
+                0x00000000000012b2                USB_ResetInterface
  .text.USB_Init
-                0x0000000000001172       0x20 ../../../../LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
-                0x0000000000001172                USB_Init
+                0x0000000000001332       0x20 ../../../../LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
+                0x0000000000001332                USB_Init
  .text.USB_INT_DisableAllInterrupts
-                0x0000000000001192       0x10 ../../../../LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
-                0x0000000000001192                USB_INT_DisableAllInterrupts
+                0x0000000000001352       0x10 ../../../../LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
+                0x0000000000001352                USB_INT_DisableAllInterrupts
  .text.USB_INT_ClearAllInterrupts
-                0x00000000000011a2        0xa ../../../../LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
-                0x00000000000011a2                USB_INT_ClearAllInterrupts
+                0x0000000000001362        0xa ../../../../LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
+                0x0000000000001362                USB_INT_ClearAllInterrupts
  .text.__vector_10
-                0x00000000000011ac      0x19c ../../../../LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
-                0x00000000000011ac                __vector_10
+                0x000000000000136c      0x19c ../../../../LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
+                0x000000000000136c                __vector_10
  .text.__vector_11
-                0x0000000000001348       0x76 ../../../../LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
-                0x0000000000001348                __vector_11
+                0x0000000000001508       0x76 ../../../../LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
+                0x0000000000001508                __vector_11
  .text.USB_Device_ProcessControlRequest
-                0x00000000000013be      0x2ae ../../../../LUFA/Drivers/USB/Core/DeviceStandardReq.o
-                0x00000000000013be                USB_Device_ProcessControlRequest
+                0x000000000000157e      0x2ae ../../../../LUFA/Drivers/USB/Core/DeviceStandardReq.o
+                0x000000000000157e                USB_Device_ProcessControlRequest
  .text.USB_Event_Stub
-                0x000000000000166c        0x2 ../../../../LUFA/Drivers/USB/Core/Events.o
-                0x000000000000166c                EVENT_USB_Device_WakeUp
-                0x000000000000166c                USB_Event_Stub
-                0x000000000000166c                EVENT_USB_Device_Suspend
-                0x000000000000166c                EVENT_USB_Device_StartOfFrame
-                0x000000000000166c                EVENT_USB_Device_Reset
+                0x000000000000182c        0x2 ../../../../LUFA/Drivers/USB/Core/Events.o
+                0x000000000000182c                EVENT_USB_Device_WakeUp
+                0x000000000000182c                USB_Event_Stub
+                0x000000000000182c                EVENT_USB_Device_Suspend
+                0x000000000000182c                EVENT_USB_Device_StartOfFrame
+                0x000000000000182c                EVENT_USB_Device_Reset
  .text.USB_USBTask
-                0x000000000000166e       0x36 ../../../../LUFA/Drivers/USB/Core/USBTask.o
-                0x000000000000166e                USB_USBTask
+                0x000000000000182e       0x36 ../../../../LUFA/Drivers/USB/Core/USBTask.o
+                0x000000000000182e                USB_USBTask
+ .text.avr-libc.fplib
+                0x0000000000001864       0x58 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(fixunssfsi.o)
+                0x0000000000001864                __fixunssfsi
+ .text.avr-libc.fplib
+                0x00000000000018bc       0x7a /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(floatsisf.o)
+                0x00000000000018bc                __floatunsisf
+                0x00000000000018c0                __floatsisf
+ .text.avr-libc.fplib
+                0x0000000000001936       0x44 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(fp_split3.o)
+                0x0000000000001936                __fp_split3
+                0x0000000000001946                __fp_splitA
+ .text.avr-libc.fplib
+                0x000000000000197a        0xe /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(fp_zero.o)
+                0x000000000000197a                __fp_zero
+                0x000000000000197c                __fp_szero
+ .text.avr-libc.fplib
+                0x0000000000001988       0x98 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(pow.o)
+                0x0000000000001988                pow
+ .text.avr-libc.fplib
+                0x0000000000001a20       0x62 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(exp.o)
+                0x0000000000001a2a                exp
+ .text.avr-libc.fplib
+                0x0000000000001a82        0xc /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(fp_inf.o)
+                0x0000000000001a82                __fp_inf
+ .text.avr-libc.fplib
+                0x0000000000001a8e        0x6 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(fp_nan.o)
+                0x0000000000001a8e                __fp_nan
+ .text.avr-libc.fplib
+                0x0000000000001a94       0x4a /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(fp_powser.o)
+                0x0000000000001a94                __fp_powser
+ .text.avr-libc.fplib
+                0x0000000000001ade        0xe /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(inverse.o)
+                0x0000000000001ade                inverse
+ .text.avr-libc.fplib
+                0x0000000000001aec       0x6c /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(ldexp.o)
+                0x0000000000001af0                ldexp
+ .text.avr-libc.fplib
+                0x0000000000001b58       0x8a /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(log.o)
+                0x0000000000001b62                log
+ .text.avr-libc.fplib
+                0x0000000000001be2       0x66 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(modf.o)
+                0x0000000000001be2                modff
+                0x0000000000001be2                modf
+ .text.avr-libc.fplib
+                0x0000000000001c48        0x4 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(mulsf3.o)
+                0x0000000000001c48                __mulsf3
+ .text.avr-libc.fplib
+                0x0000000000001c4c       0xc2 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(mulsf3x.o)
+                0x0000000000001c60                __mulsf3x
+                0x0000000000001c64                __mulsf3_pse
+ .text.avr-libc.fplib
+                0x0000000000001d0e        0xa /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(addsf3.o)
+                0x0000000000001d0e                __subsf3
+                0x0000000000001d10                __addsf3
+ .text.avr-libc.fplib
+                0x0000000000001d18       0xc0 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(addsf3x.o)
+                0x0000000000001d32                __addsf3x
+ .text.avr-libc.fplib
+                0x0000000000001dd8        0x4 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(divsf3.o)
+                0x0000000000001dd8                __divsf3
+ .text.avr-libc.fplib
+                0x0000000000001ddc       0xcc /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(divsf3x.o)
+                0x0000000000001df2                __divsf3x
+                0x0000000000001df6                __divsf3_pse
+ .text.avr-libc.fplib
+                0x0000000000001ea8       0x1c /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(fp_mpack.o)
+                0x0000000000001ea8                __fp_mpack
+                0x0000000000001eac                __fp_mpack_finite
+ .text.avr-libc.fplib
+                0x0000000000001ec4        0xe /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(fp_pscA.o)
+                0x0000000000001ec4                __fp_pscA
+ .text.avr-libc.fplib
+                0x0000000000001ed2        0xe /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(fp_pscB.o)
+                0x0000000000001ed2                __fp_pscB
+ .text.avr-libc.fplib
+                0x0000000000001ee0       0x22 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(fp_round.o)
+                0x0000000000001ee0                __fp_round
+ .text.libgcc.div
+                0x0000000000001f02       0x44 /usr/lib/gcc/avr/6.2.0/avr5/libgcc.a(_udivmodsi4.o)
+                0x0000000000001f02                __udivmodsi4
  .text.libgcc.builtins
-                0x00000000000016a4       0x3c /usr/lib/gcc/avr/6.2.0/avr5/libgcc.a(_ashrdi3.o)
-                0x00000000000016a4                __ashrdi3
-                0x00000000000016a8                __lshrdi3
- .text.libgcc   0x00000000000016e0       0x12 /usr/lib/gcc/avr/6.2.0/avr5/libgcc.a(_adddi3.o)
-                0x00000000000016e0                __adddi3
- .text.libgcc   0x00000000000016f2       0x12 /usr/lib/gcc/avr/6.2.0/avr5/libgcc.a(_subdi3.o)
-                0x00000000000016f2                __subdi3
- .text.libgcc   0x0000000000001704       0x12 /usr/lib/gcc/avr/6.2.0/avr5/libgcc.a(_cmpdi2.o)
-                0x0000000000001704                __cmpdi2
+                0x0000000000001f46       0x3c /usr/lib/gcc/avr/6.2.0/avr5/libgcc.a(_ashrdi3.o)
+                0x0000000000001f46                __ashrdi3
+                0x0000000000001f4a                __lshrdi3
+ .text.libgcc   0x0000000000001f82       0x12 /usr/lib/gcc/avr/6.2.0/avr5/libgcc.a(_adddi3.o)
+                0x0000000000001f82                __adddi3
+ .text.libgcc   0x0000000000001f94       0x12 /usr/lib/gcc/avr/6.2.0/avr5/libgcc.a(_subdi3.o)
+                0x0000000000001f94                __subdi3
+ .text.libgcc   0x0000000000001fa6       0x12 /usr/lib/gcc/avr/6.2.0/avr5/libgcc.a(_cmpdi2.o)
+                0x0000000000001fa6                __cmpdi2
  .text.avr-libc
-                0x0000000000001716       0x12 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libc.a(memcpy.o)
-                0x0000000000001716                memcpy
-                0x0000000000001728                . = ALIGN (0x2)
+                0x0000000000001fb8       0x12 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libc.a(memcpy.o)
+                0x0000000000001fb8                memcpy
+                0x0000000000001fca                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x0000000000001728        0x0 /usr/lib/gcc/avr/6.2.0/avr5/libgcc.a(_exit.o)
-                0x0000000000001728                exit
-                0x0000000000001728                _exit
+ .fini9         0x0000000000001fca        0x0 /usr/lib/gcc/avr/6.2.0/avr5/libgcc.a(_exit.o)
+                0x0000000000001fca                exit
+                0x0000000000001fca                _exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -1031,11 +1227,11 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x0000000000001728        0x4 /usr/lib/gcc/avr/6.2.0/avr5/libgcc.a(_exit.o)
+ .fini0         0x0000000000001fca        0x4 /usr/lib/gcc/avr/6.2.0/avr5/libgcc.a(_exit.o)
  *(.fini0)
-                0x000000000000172c                _etext = .
+                0x0000000000001fce                _etext = .
 
-.data           0x0000000000800100      0x15a load address 0x000000000000172c
+.data           0x0000000000800100      0x176 load address 0x0000000000001fce
                 0x0000000000800100                PROVIDE (__data_start, .)
  *(.data)
  .data          0x0000000000800100       0x34 MassStorage.o
@@ -1043,55 +1239,61 @@ END GROUP
                 0x0000000000800114                hexLookup
                 0x0000000000800123                serialmsg
                 0x0000000000800127                CommandStatus
- .data          0x0000000000800134      0x102 Lib/SCSI.o
-                0x0000000000800146                invalidmsg
-                0x0000000000800157                verifymsg
-                0x0000000000800167                preventallowmediumremovalmsg
-                0x0000000000800186                testunitmsg
-                0x0000000000800199                startstopmsg
-                0x00000000008001ad                modesensemsg
-                0x00000000008001c1                readmsg
-                0x00000000008001cf                writemsg
-                0x00000000008001de                senddiagnosticmsg
-                0x00000000008001f7                readcapacitymsg
-                0x000000000080020e                requestsensemsg
-                0x0000000000800225                inquirymsg
+ .data          0x0000000000800134       0x1b data.o
+                0x0000000000800134                test
+                0x0000000000800138                digitLookup
+                0x0000000000800142                readcmdmsg2
+                0x000000000080014a                readcmdmsg
+ .data          0x000000000080014f      0x102 Lib/SCSI.o
+                0x0000000000800161                invalidmsg
+                0x0000000000800172                verifymsg
+                0x0000000000800182                preventallowmediumremovalmsg
+                0x00000000008001a1                testunitmsg
+                0x00000000008001b4                startstopmsg
+                0x00000000008001c8                modesensemsg
+                0x00000000008001dc                readmsg
+                0x00000000008001ea                writemsg
+                0x00000000008001f9                senddiagnosticmsg
+                0x0000000000800212                readcapacitymsg
+                0x0000000000800229                requestsensemsg
+                0x0000000000800240                inquirymsg
  *(.data*)
  *(.rodata)
- .rodata        0x0000000000800236       0x24 Lib/SCSI.o
+ .rodata        0x0000000000800251       0x24 Lib/SCSI.o
  *(.rodata*)
  *(.gnu.linkonce.d*)
-                0x000000000080025a                . = ALIGN (0x2)
-                0x000000000080025a                _edata = .
-                0x000000000080025a                PROVIDE (__data_end, .)
+                0x0000000000800276                . = ALIGN (0x2)
+ *fill*         0x0000000000800275        0x1 
+                0x0000000000800276                _edata = .
+                0x0000000000800276                PROVIDE (__data_end, .)
 
-.bss            0x000000000080025a      0x236
-                0x000000000080025a                PROVIDE (__bss_start, .)
+.bss            0x0000000000800276      0x236
+                0x0000000000800276                PROVIDE (__bss_start, .)
  *(.bss)
- .bss           0x000000000080025a        0x1 MassStorage.o
-                0x000000000080025a                IsMassStoreReset
- .bss           0x000000000080025b      0x209 Lib/sd_raw.o
+ .bss           0x0000000000800276        0x1 MassStorage.o
+                0x0000000000800276                IsMassStoreReset
+ .bss           0x0000000000800277      0x209 Lib/sd_raw.o
  *(.bss*)
  *(COMMON)
- COMMON         0x0000000000800464       0x1f MassStorage.o
-                0x0000000000800464                CommandBlock
- COMMON         0x0000000000800483        0x3 ../../../../LUFA/Drivers/USB/Core/DeviceStandardReq.o
-                0x0000000000800483                USB_Device_ConfigurationNumber
-                0x0000000000800484                USB_Device_CurrentlySelfPowered
-                0x0000000000800485                USB_Device_RemoteWakeupEnabled
- COMMON         0x0000000000800486        0xa ../../../../LUFA/Drivers/USB/Core/USBTask.o
-                0x0000000000800486                USB_IsInitialized
-                0x0000000000800487                USB_DeviceState
-                0x0000000000800488                USB_ControlRequest
-                0x0000000000800490                PROVIDE (__bss_end, .)
-                0x000000000000172c                __data_load_start = LOADADDR (.data)
-                0x0000000000001886                __data_load_end = (__data_load_start + SIZEOF (.data))
+ COMMON         0x0000000000800480       0x1f MassStorage.o
+                0x0000000000800480                CommandBlock
+ COMMON         0x000000000080049f        0x3 ../../../../LUFA/Drivers/USB/Core/DeviceStandardReq.o
+                0x000000000080049f                USB_Device_ConfigurationNumber
+                0x00000000008004a0                USB_Device_CurrentlySelfPowered
+                0x00000000008004a1                USB_Device_RemoteWakeupEnabled
+ COMMON         0x00000000008004a2        0xa ../../../../LUFA/Drivers/USB/Core/USBTask.o
+                0x00000000008004a2                USB_IsInitialized
+                0x00000000008004a3                USB_DeviceState
+                0x00000000008004a4                USB_ControlRequest
+                0x00000000008004ac                PROVIDE (__bss_end, .)
+                0x0000000000001fce                __data_load_start = LOADADDR (.data)
+                0x0000000000002144                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x0000000000800490        0x0
+.noinit         0x00000000008004ac        0x0
                 [!provide]                        PROVIDE (__noinit_start, .)
  *(.noinit*)
                 [!provide]                        PROVIDE (__noinit_end, .)
-                0x0000000000800490                _end = .
+                0x00000000008004ac                _end = .
                 [!provide]                        PROVIDE (__heap_start, .)
 
 .eeprom         0x0000000000810000        0x0
@@ -1197,74 +1399,74 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x0000000000000000     0x7533
+.debug_info     0x0000000000000000     0x7611
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x0000000000000000      0x9f4 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/crtatmega32u4.o
  .debug_info    0x00000000000009f4      0xd08 MassStorage.o
  .debug_info    0x00000000000016fc      0x7b0 Descriptors.o
  .debug_info    0x0000000000001eac      0x124 serial.o
- .debug_info    0x0000000000001fd0      0x564 data.o
- .debug_info    0x0000000000002534      0xda8 Lib/SCSI.o
- .debug_info    0x00000000000032dc      0x904 Lib/sd_raw.o
- .debug_info    0x0000000000003be0     0x17dc ../../../../LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
- .debug_info    0x00000000000053bc      0x651 ../../../../LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
- .debug_info    0x0000000000005a0d      0x54e ../../../../LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
- .debug_info    0x0000000000005f5b      0x87a ../../../../LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
- .debug_info    0x00000000000067d5      0xa39 ../../../../LUFA/Drivers/USB/Core/DeviceStandardReq.o
- .debug_info    0x000000000000720e       0x78 ../../../../LUFA/Drivers/USB/Core/Events.o
- .debug_info    0x0000000000007286      0x2ad ../../../../LUFA/Drivers/USB/Core/USBTask.o
+ .debug_info    0x0000000000001fd0      0x668 data.o
+ .debug_info    0x0000000000002638      0xd82 Lib/SCSI.o
+ .debug_info    0x00000000000033ba      0x904 Lib/sd_raw.o
+ .debug_info    0x0000000000003cbe     0x17dc ../../../../LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+ .debug_info    0x000000000000549a      0x651 ../../../../LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
+ .debug_info    0x0000000000005aeb      0x54e ../../../../LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
+ .debug_info    0x0000000000006039      0x87a ../../../../LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
+ .debug_info    0x00000000000068b3      0xa39 ../../../../LUFA/Drivers/USB/Core/DeviceStandardReq.o
+ .debug_info    0x00000000000072ec       0x78 ../../../../LUFA/Drivers/USB/Core/Events.o
+ .debug_info    0x0000000000007364      0x2ad ../../../../LUFA/Drivers/USB/Core/USBTask.o
 
-.debug_abbrev   0x0000000000000000     0x23f4
+.debug_abbrev   0x0000000000000000     0x2408
  *(.debug_abbrev)
  .debug_abbrev  0x0000000000000000      0x96a /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/crtatmega32u4.o
  .debug_abbrev  0x000000000000096a      0x37c MassStorage.o
  .debug_abbrev  0x0000000000000ce6      0x1b9 Descriptors.o
  .debug_abbrev  0x0000000000000e9f       0xf2 serial.o
- .debug_abbrev  0x0000000000000f91      0x250 data.o
- .debug_abbrev  0x00000000000011e1      0x2f4 Lib/SCSI.o
- .debug_abbrev  0x00000000000014d5      0x253 Lib/sd_raw.o
- .debug_abbrev  0x0000000000001728      0x208 ../../../../LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
- .debug_abbrev  0x0000000000001930      0x240 ../../../../LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
- .debug_abbrev  0x0000000000001b70      0x1ad ../../../../LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
- .debug_abbrev  0x0000000000001d1d      0x22f ../../../../LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
- .debug_abbrev  0x0000000000001f4c      0x2ce ../../../../LUFA/Drivers/USB/Core/DeviceStandardReq.o
- .debug_abbrev  0x000000000000221a       0x44 ../../../../LUFA/Drivers/USB/Core/Events.o
- .debug_abbrev  0x000000000000225e      0x196 ../../../../LUFA/Drivers/USB/Core/USBTask.o
+ .debug_abbrev  0x0000000000000f91      0x264 data.o
+ .debug_abbrev  0x00000000000011f5      0x2f4 Lib/SCSI.o
+ .debug_abbrev  0x00000000000014e9      0x253 Lib/sd_raw.o
+ .debug_abbrev  0x000000000000173c      0x208 ../../../../LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+ .debug_abbrev  0x0000000000001944      0x240 ../../../../LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
+ .debug_abbrev  0x0000000000001b84      0x1ad ../../../../LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
+ .debug_abbrev  0x0000000000001d31      0x22f ../../../../LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
+ .debug_abbrev  0x0000000000001f60      0x2ce ../../../../LUFA/Drivers/USB/Core/DeviceStandardReq.o
+ .debug_abbrev  0x000000000000222e       0x44 ../../../../LUFA/Drivers/USB/Core/Events.o
+ .debug_abbrev  0x0000000000002272      0x196 ../../../../LUFA/Drivers/USB/Core/USBTask.o
 
-.debug_line     0x0000000000000000     0x3c90
+.debug_line     0x0000000000000000     0x3cf5
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x0000000000000000       0x1d /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/crtatmega32u4.o
- .debug_line    0x000000000000001d      0x646 MassStorage.o
- .debug_line    0x0000000000000663      0x224 Descriptors.o
- .debug_line    0x0000000000000887       0xb6 serial.o
- .debug_line    0x000000000000093d      0x27a data.o
- .debug_line    0x0000000000000bb7      0x3c2 Lib/SCSI.o
- .debug_line    0x0000000000000f79      0x5f3 Lib/sd_raw.o
- .debug_line    0x000000000000156c     0x13bc ../../../../LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
- .debug_line    0x0000000000002928      0x4b9 ../../../../LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
- .debug_line    0x0000000000002de1      0x2fc ../../../../LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
- .debug_line    0x00000000000030dd      0x530 ../../../../LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
- .debug_line    0x000000000000360d      0x4ad ../../../../LUFA/Drivers/USB/Core/DeviceStandardReq.o
- .debug_line    0x0000000000003aba       0x5b ../../../../LUFA/Drivers/USB/Core/Events.o
- .debug_line    0x0000000000003b15      0x17b ../../../../LUFA/Drivers/USB/Core/USBTask.o
+ .debug_line    0x000000000000001d      0x645 MassStorage.o
+ .debug_line    0x0000000000000662      0x224 Descriptors.o
+ .debug_line    0x0000000000000886       0xb6 serial.o
+ .debug_line    0x000000000000093c      0x2e7 data.o
+ .debug_line    0x0000000000000c23      0x3bb Lib/SCSI.o
+ .debug_line    0x0000000000000fde      0x5f3 Lib/sd_raw.o
+ .debug_line    0x00000000000015d1     0x13bc ../../../../LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+ .debug_line    0x000000000000298d      0x4b9 ../../../../LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
+ .debug_line    0x0000000000002e46      0x2fc ../../../../LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
+ .debug_line    0x0000000000003142      0x530 ../../../../LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
+ .debug_line    0x0000000000003672      0x4ad ../../../../LUFA/Drivers/USB/Core/DeviceStandardReq.o
+ .debug_line    0x0000000000003b1f       0x5b ../../../../LUFA/Drivers/USB/Core/Events.o
+ .debug_line    0x0000000000003b7a      0x17b ../../../../LUFA/Drivers/USB/Core/USBTask.o
 
-.debug_frame    0x0000000000000000      0xa04
+.debug_frame    0x0000000000000000      0xa18
  *(.debug_frame)
  .debug_frame   0x0000000000000000       0xac MassStorage.o
  .debug_frame   0x00000000000000ac       0x24 Descriptors.o
  .debug_frame   0x00000000000000d0       0x58 serial.o
- .debug_frame   0x0000000000000128       0x70 data.o
- .debug_frame   0x0000000000000198       0x38 Lib/SCSI.o
- .debug_frame   0x00000000000001d0      0x1dc Lib/sd_raw.o
- .debug_frame   0x00000000000003ac      0x414 ../../../../LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
- .debug_frame   0x00000000000007c0       0x78 ../../../../LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
- .debug_frame   0x0000000000000838       0x58 ../../../../LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
- .debug_frame   0x0000000000000890       0xe8 ../../../../LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
- .debug_frame   0x0000000000000978       0x3c ../../../../LUFA/Drivers/USB/Core/DeviceStandardReq.o
- .debug_frame   0x00000000000009b4       0x24 ../../../../LUFA/Drivers/USB/Core/Events.o
- .debug_frame   0x00000000000009d8       0x2c ../../../../LUFA/Drivers/USB/Core/USBTask.o
+ .debug_frame   0x0000000000000128       0x84 data.o
+ .debug_frame   0x00000000000001ac       0x38 Lib/SCSI.o
+ .debug_frame   0x00000000000001e4      0x1dc Lib/sd_raw.o
+ .debug_frame   0x00000000000003c0      0x414 ../../../../LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+ .debug_frame   0x00000000000007d4       0x78 ../../../../LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
+ .debug_frame   0x000000000000084c       0x58 ../../../../LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
+ .debug_frame   0x00000000000008a4       0xe8 ../../../../LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
+ .debug_frame   0x000000000000098c       0x3c ../../../../LUFA/Drivers/USB/Core/DeviceStandardReq.o
+ .debug_frame   0x00000000000009c8       0x24 ../../../../LUFA/Drivers/USB/Core/Events.o
+ .debug_frame   0x00000000000009ec       0x2c ../../../../LUFA/Drivers/USB/Core/USBTask.o
 
-.debug_str      0x0000000000000000     0x2797
+.debug_str      0x0000000000000000     0x2775
  *(.debug_str)
  .debug_str     0x0000000000000000      0x371 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/crtatmega32u4.o
  .debug_str     0x0000000000000371      0x93d MassStorage.o
@@ -1273,41 +1475,41 @@ END GROUP
                                         0x952 (size before relaxing)
  .debug_str     0x00000000000012e5       0x1a serial.o
                                         0x1e6 (size before relaxing)
- .debug_str     0x00000000000012ff       0xd2 data.o
-                                        0x49c (size before relaxing)
- .debug_str     0x00000000000013d1      0x387 Lib/SCSI.o
+ .debug_str     0x00000000000012ff       0xb0 data.o
+                                        0x49e (size before relaxing)
+ .debug_str     0x00000000000013af      0x387 Lib/SCSI.o
                                         0x7ed (size before relaxing)
- .debug_str     0x0000000000001758      0x20b Lib/sd_raw.o
+ .debug_str     0x0000000000001736      0x20b Lib/sd_raw.o
                                         0x418 (size before relaxing)
- .debug_str     0x0000000000001963      0x403 ../../../../LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+ .debug_str     0x0000000000001941      0x403 ../../../../LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
                                         0x8ff (size before relaxing)
- .debug_str     0x0000000000001d66      0x244 ../../../../LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
+ .debug_str     0x0000000000001d44      0x244 ../../../../LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
                                         0x6bf (size before relaxing)
- .debug_str     0x0000000000001faa      0x223 ../../../../LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
+ .debug_str     0x0000000000001f88      0x223 ../../../../LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
                                         0x5e3 (size before relaxing)
- .debug_str     0x00000000000021cd      0x196 ../../../../LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
+ .debug_str     0x00000000000021ab      0x196 ../../../../LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
                                         0x6b3 (size before relaxing)
- .debug_str     0x0000000000002363      0x3b2 ../../../../LUFA/Drivers/USB/Core/DeviceStandardReq.o
+ .debug_str     0x0000000000002341      0x3b2 ../../../../LUFA/Drivers/USB/Core/DeviceStandardReq.o
                                         0xa13 (size before relaxing)
- .debug_str     0x0000000000002715       0x3a ../../../../LUFA/Drivers/USB/Core/Events.o
+ .debug_str     0x00000000000026f3       0x3a ../../../../LUFA/Drivers/USB/Core/Events.o
                                         0x1d3 (size before relaxing)
- .debug_str     0x000000000000274f       0x48 ../../../../LUFA/Drivers/USB/Core/USBTask.o
+ .debug_str     0x000000000000272d       0x48 ../../../../LUFA/Drivers/USB/Core/USBTask.o
                                         0x412 (size before relaxing)
 
-.debug_loc      0x0000000000000000     0x469a
+.debug_loc      0x0000000000000000     0x4781
  *(.debug_loc)
  .debug_loc     0x0000000000000000      0x286 MassStorage.o
  .debug_loc     0x0000000000000286      0x17a Descriptors.o
  .debug_loc     0x0000000000000400       0xee serial.o
- .debug_loc     0x00000000000004ee      0x1cb data.o
- .debug_loc     0x00000000000006b9      0x1ee Lib/SCSI.o
- .debug_loc     0x00000000000008a7      0xcaa Lib/sd_raw.o
- .debug_loc     0x0000000000001551     0x24ff ../../../../LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
- .debug_loc     0x0000000000003a50      0x440 ../../../../LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
- .debug_loc     0x0000000000003e90       0xd5 ../../../../LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
- .debug_loc     0x0000000000003f65      0x3e7 ../../../../LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
- .debug_loc     0x000000000000434c      0x305 ../../../../LUFA/Drivers/USB/Core/DeviceStandardReq.o
- .debug_loc     0x0000000000004651       0x49 ../../../../LUFA/Drivers/USB/Core/USBTask.o
+ .debug_loc     0x00000000000004ee      0x2b2 data.o
+ .debug_loc     0x00000000000007a0      0x1ee Lib/SCSI.o
+ .debug_loc     0x000000000000098e      0xcaa Lib/sd_raw.o
+ .debug_loc     0x0000000000001638     0x24ff ../../../../LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+ .debug_loc     0x0000000000003b37      0x440 ../../../../LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
+ .debug_loc     0x0000000000003f77       0xd5 ../../../../LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
+ .debug_loc     0x000000000000404c      0x3e7 ../../../../LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
+ .debug_loc     0x0000000000004433      0x305 ../../../../LUFA/Drivers/USB/Core/DeviceStandardReq.o
+ .debug_loc     0x0000000000004738       0x49 ../../../../LUFA/Drivers/USB/Core/USBTask.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -1327,21 +1529,21 @@ END GROUP
 .debug_pubtypes
  *(.debug_pubtypes)
 
-.debug_ranges   0x0000000000000000      0x748
+.debug_ranges   0x0000000000000000      0x730
  *(.debug_ranges)
  .debug_ranges  0x0000000000000000       0x88 MassStorage.o
  .debug_ranges  0x0000000000000088       0x28 Descriptors.o
  .debug_ranges  0x00000000000000b0       0x38 serial.o
- .debug_ranges  0x00000000000000e8       0x40 data.o
- .debug_ranges  0x0000000000000128       0x40 Lib/SCSI.o
- .debug_ranges  0x0000000000000168       0xf8 Lib/sd_raw.o
- .debug_ranges  0x0000000000000260      0x228 ../../../../LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
- .debug_ranges  0x0000000000000488       0xe8 ../../../../LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
- .debug_ranges  0x0000000000000570       0x20 ../../../../LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
- .debug_ranges  0x0000000000000590       0x28 ../../../../LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
- .debug_ranges  0x00000000000005b8      0x128 ../../../../LUFA/Drivers/USB/Core/DeviceStandardReq.o
- .debug_ranges  0x00000000000006e0       0x10 ../../../../LUFA/Drivers/USB/Core/Events.o
- .debug_ranges  0x00000000000006f0       0x58 ../../../../LUFA/Drivers/USB/Core/USBTask.o
+ .debug_ranges  0x00000000000000e8       0x28 data.o
+ .debug_ranges  0x0000000000000110       0x40 Lib/SCSI.o
+ .debug_ranges  0x0000000000000150       0xf8 Lib/sd_raw.o
+ .debug_ranges  0x0000000000000248      0x228 ../../../../LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
+ .debug_ranges  0x0000000000000470       0xe8 ../../../../LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
+ .debug_ranges  0x0000000000000558       0x20 ../../../../LUFA/Drivers/USB/Core/AVR8/USBController_AVR8.o
+ .debug_ranges  0x0000000000000578       0x28 ../../../../LUFA/Drivers/USB/Core/AVR8/USBInterrupt_AVR8.o
+ .debug_ranges  0x00000000000005a0      0x128 ../../../../LUFA/Drivers/USB/Core/DeviceStandardReq.o
+ .debug_ranges  0x00000000000006c8       0x10 ../../../../LUFA/Drivers/USB/Core/Events.o
+ .debug_ranges  0x00000000000006d8       0x58 ../../../../LUFA/Drivers/USB/Core/USBTask.o
 
 .debug_macro
  *(.debug_macro)
@@ -1351,7 +1553,6 @@ LOAD linker stubs
 Cross Reference Table
 
 Symbol                                            File
-BlockAddressmsg                                   data.o
 CALLBACK_HIDParser_FilterHIDReportItem            ../../../../LUFA/Drivers/USB/Class/Common/HIDParser.o
 CALLBACK_USB_GetDescriptor                        Descriptors.o
                                                   ../../../../LUFA/Drivers/USB/Core/DeviceStandardReq.o
@@ -1426,7 +1627,6 @@ ProductString                                     Descriptors.o
 SCSI_DecodeSCSICommand                            Lib/SCSI.o
                                                   MassStorage.o
 SetupHardware                                     MassStorage.o
-TotalBlocksmsg                                    data.o
 USB_ControlRequest                                ../../../../LUFA/Drivers/USB/Core/USBTask.o
                                                   ../../../../LUFA/Drivers/USB/Core/DeviceStandardReq.o
                                                   ../../../../LUFA/Drivers/USB/Core/AVR8/Endpoint_AVR8.o
@@ -1476,6 +1676,12 @@ __adddi3                                          /usr/lib/gcc/avr/6.2.0/avr5/li
                                                   Lib/fat.o
 __adddi3_s8                                       /usr/lib/gcc/avr/6.2.0/avr5/libgcc.a(_adddi3_s8.o)
                                                   Lib/fat.o
+__addsf3                                          /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(addsf3.o)
+                                                  /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(log.o)
+__addsf3x                                         /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(addsf3x.o)
+                                                  /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(addsf3.o)
+                                                  /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(log.o)
+                                                  /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(fp_powser.o)
 __ashldi3                                         /usr/lib/gcc/avr/6.2.0/avr5/libgcc.a(_ashldi3.o)
                                                   Lib/sd_raw.o
                                                   Lib/fat.o
@@ -1491,6 +1697,11 @@ __cmpdi2_s8                                       /usr/lib/gcc/avr/6.2.0/avr5/li
 __data_end                                        /usr/lib/gcc/avr/6.2.0/avr5/libgcc.a(_copy_data.o)
 __data_load_start                                 /usr/lib/gcc/avr/6.2.0/avr5/libgcc.a(_copy_data.o)
 __data_start                                      /usr/lib/gcc/avr/6.2.0/avr5/libgcc.a(_copy_data.o)
+__divsf3                                          /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(divsf3.o)
+                                                  /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(inverse.o)
+__divsf3_pse                                      /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(divsf3x.o)
+__divsf3x                                         /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(divsf3x.o)
+                                                  /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(divsf3.o)
 __do_clear_bss                                    /usr/lib/gcc/avr/6.2.0/avr5/libgcc.a(_clear_bss.o)
                                                   ../../../../LUFA/Drivers/USB/Core/USBTask.o
                                                   ../../../../LUFA/Drivers/USB/Core/DeviceStandardReq.o
@@ -1503,6 +1714,63 @@ __do_copy_data                                    /usr/lib/gcc/avr/6.2.0/avr5/li
                                                   Lib/SCSI.o
                                                   data.o
                                                   MassStorage.o
+__fixunssfsi                                      /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(fixunssfsi.o)
+                                                  data.o
+__floatsisf                                       /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(floatsisf.o)
+                                                  /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(log.o)
+                                                  data.o
+__floatunsisf                                     /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(floatsisf.o)
+__fp_inf                                          /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(fp_inf.o)
+                                                  /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(divsf3x.o)
+                                                  /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(addsf3x.o)
+                                                  /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(mulsf3x.o)
+                                                  /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(log.o)
+                                                  /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(ldexp.o)
+                                                  /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(exp.o)
+__fp_mpack                                        /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(fp_mpack.o)
+                                                  /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(log.o)
+                                                  /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(ldexp.o)
+__fp_mpack_finite                                 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(fp_mpack.o)
+__fp_nan                                          /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(fp_nan.o)
+                                                  /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(divsf3x.o)
+                                                  /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(addsf3x.o)
+                                                  /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(mulsf3x.o)
+                                                  /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(log.o)
+                                                  /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(exp.o)
+                                                  /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(pow.o)
+__fp_powser                                       /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(fp_powser.o)
+                                                  /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(log.o)
+                                                  /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(exp.o)
+__fp_pscA                                         /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(fp_pscA.o)
+                                                  /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(divsf3x.o)
+                                                  /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(addsf3x.o)
+                                                  /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(mulsf3x.o)
+__fp_pscB                                         /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(fp_pscB.o)
+                                                  /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(divsf3x.o)
+                                                  /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(addsf3x.o)
+                                                  /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(mulsf3x.o)
+__fp_round                                        /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(fp_round.o)
+                                                  /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(divsf3.o)
+                                                  /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(addsf3.o)
+                                                  /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(mulsf3.o)
+                                                  /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(log.o)
+__fp_split3                                       /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(fp_split3.o)
+                                                  /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(divsf3x.o)
+                                                  /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(addsf3x.o)
+                                                  /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(mulsf3x.o)
+__fp_splitA                                       /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(fp_split3.o)
+                                                  /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(log.o)
+                                                  /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(ldexp.o)
+                                                  /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(exp.o)
+                                                  /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(fixunssfsi.o)
+__fp_szero                                        /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(fp_zero.o)
+                                                  /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(divsf3x.o)
+                                                  /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(mulsf3x.o)
+                                                  /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(ldexp.o)
+__fp_zero                                         /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(fp_zero.o)
+                                                  /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(addsf3x.o)
+                                                  /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(exp.o)
+                                                  /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(fixunssfsi.o)
 __heap_end                                        /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/crtatmega32u4.o
 __init                                            /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/crtatmega32u4.o
 __lshrdi3                                         /usr/lib/gcc/avr/6.2.0/avr5/libgcc.a(_ashrdi3.o)
@@ -1512,6 +1780,14 @@ __muldi3                                          /usr/lib/gcc/avr/6.2.0/avr5/li
 __muldi3_6                                        /usr/lib/gcc/avr/6.2.0/avr5/libgcc.a(_muldi3_6.o)
                                                   /usr/lib/gcc/avr/6.2.0/avr5/libgcc.a(_umulsidi3.o)
                                                   /usr/lib/gcc/avr/6.2.0/avr5/libgcc.a(_muldi3.o)
+__mulsf3                                          /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(mulsf3.o)
+                                                  /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(pow.o)
+__mulsf3_pse                                      /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(mulsf3x.o)
+                                                  /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(exp.o)
+__mulsf3x                                         /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(mulsf3x.o)
+                                                  /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(mulsf3.o)
+                                                  /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(log.o)
+                                                  /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(fp_powser.o)
 __mulsi3                                          /usr/lib/gcc/avr/6.2.0/avr5/libgcc.a(_mulsi3.o)
                                                   Lib/fat.o
 __muluhisi3                                       /usr/lib/gcc/avr/6.2.0/avr5/libgcc.a(_muluhisi3.o)
@@ -1519,10 +1795,13 @@ __muluhisi3                                       /usr/lib/gcc/avr/6.2.0/avr5/li
 __stack                                           /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/crtatmega32u4.o
 __subdi3                                          /usr/lib/gcc/avr/6.2.0/avr5/libgcc.a(_subdi3.o)
                                                   Lib/sd_raw.o
+__subsf3                                          /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(addsf3.o)
+                                                  /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(modf.o)
 __udivmodhi4                                      /usr/lib/gcc/avr/6.2.0/avr5/libgcc.a(_udivmodhi4.o)
                                                   Lib/fat.o
 __udivmodsi4                                      /usr/lib/gcc/avr/6.2.0/avr5/libgcc.a(_udivmodsi4.o)
                                                   Lib/fat.o
+                                                  data.o
 __umulhisi3                                       /usr/lib/gcc/avr/6.2.0/avr5/libgcc.a(_umulhisi3.o)
                                                   /usr/lib/gcc/avr/6.2.0/avr5/libgcc.a(_umulsidi3.o)
                                                   /usr/lib/gcc/avr/6.2.0/avr5/libgcc.a(_muldi3_6.o)
@@ -1578,17 +1857,16 @@ __vector_9                                        /usr/lib/gcc/avr/6.2.0/../../.
 __vector_default                                  /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/crtatmega32u4.o
 __vectors                                         /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/crtatmega32u4.o
 _exit                                             /usr/lib/gcc/avr/6.2.0/avr5/libgcc.a(_exit.o)
-buffermsg                                         data.o
-chunkmsg                                          data.o
-currentblkmsg                                     data.o
+digitLookup                                       data.o
 eeprom_read_byte                                  /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libatmega32u4.a(eerd_byte.o)
                                                   ../../../../LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
 eeprom_update_byte                                /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libatmega32u4.a(eeupd_byte.o)
                                                   ../../../../LUFA/Drivers/USB/Core/AVR8/EndpointStream_AVR8.o
 eeprom_update_r18                                 /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libatmega32u4.a(eeupd_byte.o)
-endpointfullmsg                                   data.o
 exit                                              /usr/lib/gcc/avr/6.2.0/avr5/libgcc.a(_exit.o)
                                                   /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/crtatmega32u4.o
+exp                                               /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(exp.o)
+                                                  /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(pow.o)
 fat_close                                         Lib/fat.o
 fat_close_dir                                     Lib/fat.o
 fat_close_file                                    Lib/fat.o
@@ -1606,13 +1884,24 @@ get_pin_locked                                    Lib/sd_raw.o
 hexLookup                                         MassStorage.o
 inquirymsg                                        Lib/SCSI.o
 invalidmsg                                        Lib/SCSI.o
+inverse                                           /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(inverse.o)
+                                                  /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(exp.o)
+ldexp                                             /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(ldexp.o)
+                                                  /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(exp.o)
+log                                               /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(log.o)
+                                                  /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(pow.o)
 main                                              MassStorage.o
                                                   /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/crtatmega32u4.o
 memcpy                                            /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libc.a(memcpy.o)
                                                   Lib/sd_raw.o
 modesensemsg                                      Lib/SCSI.o
+modf                                              /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(modf.o)
+                                                  /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(exp.o)
+modff                                             /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(modf.o)
 partition_close                                   Lib/partition.o
 partition_open                                    Lib/partition.o
+pow                                               /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libm.a(pow.o)
+                                                  data.o
 preventallowmediumremovalmsg                      Lib/SCSI.o
 read16                                            Lib/byteordering.o
                                                   Lib/fat.o
@@ -1622,6 +1911,8 @@ read32                                            Lib/byteordering.o
 readData                                          data.o
                                                   Lib/SCSI.o
 readcapacitymsg                                   Lib/SCSI.o
+readcmdmsg                                        data.o
+readcmdmsg2                                       data.o
 readmsg                                           Lib/SCSI.o
 requestsensemsg                                   Lib/SCSI.o
 sd_raw_available                                  Lib/sd_raw.o
@@ -1637,8 +1928,10 @@ senddiagnosticmsg                                 Lib/SCSI.o
 serialBegin                                       serial.o
                                                   MassStorage.o
 serialWrite                                       serial.o
+                                                  data.o
 serialWriteArray                                  serial.o
                                                   Lib/SCSI.o
+                                                  data.o
                                                   MassStorage.o
 serialmsg                                         MassStorage.o
 startstopmsg                                      Lib/SCSI.o
@@ -1646,6 +1939,7 @@ strchr                                            /usr/lib/gcc/avr/6.2.0/../../.
                                                   Lib/fat.o
 strncmp                                           /usr/lib/gcc/avr/6.2.0/../../../../avr/lib/avr5/libc.a(strncmp.o)
                                                   Lib/fat.o
+test                                              data.o
 testunitmsg                                       Lib/SCSI.o
 verifymsg                                         Lib/SCSI.o
 write16                                           Lib/byteordering.o

@@ -1,8 +1,27 @@
 #include "data.h"
 
+unsigned char readcmdmsg[] = {'r', 'e', 'a', 'd', ' '};
+unsigned char readcmdmsg2[] = {' ', 'l', 'e', 'n', 'g', 't', 'h', ' '};
+unsigned char digitLookup[] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
+uint32_t test = 1234567890;
+
 void readData(const uint32_t BlockAddress, uint16_t TotalBlocks)
 {
-	uint16_t offset = BlockAddress * VIRTUAL_MEMORY_BLOCK_SIZE;
+	uint32_t offset = BlockAddress * VIRTUAL_MEMORY_BLOCK_SIZE;
+	uint32_t length = TotalBlocks * VIRTUAL_MEMORY_BLOCK_SIZE;
+
+	serialWriteArray(readcmdmsg, 5);
+	for(int i = 9; i >= 0; i--)
+	{
+		serialWrite(digitLookup[(offset / (uint32_t)pow(10, i)) % 10]);
+	}
+	serialWriteArray(readcmdmsg2, 8);
+	for(int i = 9; i >= 0; i--)
+	{
+		serialWrite(digitLookup[(length / (uint32_t)pow(10, i)) % 10]);
+	}
+	serialWrite('\n');
+	serialWrite('\r');
 
 	/* Wait until endpoint is ready before continuing */
 	if (Endpoint_WaitUntilReady())

@@ -92,7 +92,7 @@ bool SCSI_DecodeSCSICommand(void)
 			CommandSuccess = SCSI_Command_ReadWrite_10(DATA_WRITE);
 			break;
 		case SCSI_CMD_READ_10:
-			serialWriteArray(readmsg, 14);
+			//serialWriteArray(readmsg, 14);
 			CommandSuccess = SCSI_Command_ReadWrite_10(DATA_READ);
 			break;
 		case SCSI_CMD_MODE_SENSE_6:
