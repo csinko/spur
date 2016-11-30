@@ -44,7 +44,7 @@
 #define _APP_CONFIG_H_
 
 	#define TOTAL_LUNS                1
-  #define LUN_MEDIA_BLOCKS        8388608
+  #define LUN_MEDIA_BLOCKS        15523840  // matches SD card size: 7.4 GiB
 	#define DISK_READ_ONLY            true
   #define VIRTUAL_MEMORY_BLOCK_SIZE           512
 
