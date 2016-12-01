@@ -92,7 +92,7 @@ cd /mnt
 mkdir boot EFI
 
 # Install GRUB for BIOS
-grub-install -force --target=i386-pc --boot-directory=./boot /dev/mmc
+grub-install --force --target=i386-pc --boot-directory=./boot /dev/mmc
 
 # Install GRUB for UEFI
 grub-install --target=x86_64-efi --efi-directory=./ --boot-directory=./EFI --bootloader-id=boot --removable /dev/mmc
