@@ -13,6 +13,9 @@ volatile bool IsMassStoreReset = false;
 unsigned char serialmsg[] = {'T', 'e', 's', 't'};
 unsigned char hexLookup[] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'F'};
 unsigned char sderrormsg[] = {'s', 'd', ' ', 'c', 'a', 'r', 'd', ' ', 'i', 'n', 'i', 't', ' ', 'e', 'r', 'r', 'o', 'r', '\n', '\r'};
+unsigned char fslabelmsg[] = "original label:\n\r";
+unsigned char fslabelmsg2[] = "modified label:\n\r";
+
 int main(void)
 {
 	serialBegin();
@@ -23,6 +26,57 @@ int main(void)
 		serialWriteArray(sderrormsg, 20);
 		for (;;) ;
 	}
+
+	/* get fs label
+		address			sector		byte
+		0x00100047		2048		71		fat32 boot sector
+		0x00100c47		2054		71		backup boot sector
+		0x00300200		6145		0		directory entry
+	*/
+
+	// read original label
+	serialWriteArray(fslabelmsg, 17);
+	uint8_t buffer[11] = {0};
+	sd_raw_read(0x00100047, buffer, 11);
+	serialWriteArray((unsigned char*)buffer, 11);
+	serialWrite('\n');
+	serialWrite('\r');
+	memset(buffer, 0, 11);
+	sd_raw_read(0x00100c47, buffer, 11);
+	serialWriteArray((unsigned char*)buffer, 11);
+	serialWrite('\n');
+	serialWrite('\r');
+	memset(buffer, 0, 11);
+	sd_raw_read(0x00300200, buffer, 11);
+	serialWriteArray((unsigned char*)buffer, 11);
+	serialWrite('\n');
+	serialWrite('\r');
+
+	// set the label
+	unsigned char fsLabel[] = "SPUR-MODE02";
+	sd_raw_write(0x00100047, (uint8_t*)fsLabel, 11);
+	sd_raw_write(0x00100c47, (uint8_t*)fsLabel, 11);
+	sd_raw_write(0x00300200, (uint8_t*)fsLabel, 11);
+
+	// read the modified label
+	serialWrite('\n');
+	serialWrite('\r');
+	serialWriteArray(fslabelmsg2, 17);
+	memset(buffer, 0, 11);
+	sd_raw_read(0x00100047, buffer, 11);
+	serialWriteArray((unsigned char*)buffer, 11);
+	serialWrite('\n');
+	serialWrite('\r');
+	memset(buffer, 0, 11);
+	sd_raw_read(0x00100c47, buffer, 11);
+	serialWriteArray((unsigned char*)buffer, 11);
+	serialWrite('\n');
+	serialWrite('\r');
+	memset(buffer, 0, 11);
+	sd_raw_read(0x00300200, buffer, 11);
+	serialWriteArray((unsigned char*)buffer, 11);
+	serialWrite('\n');
+	serialWrite('\r');
 
 	SetupHardware();
 
