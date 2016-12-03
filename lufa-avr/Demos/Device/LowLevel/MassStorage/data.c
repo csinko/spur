@@ -8,7 +8,7 @@ uint32_t test = 1234567890;
 void readData(const uint32_t BlockAddress, uint16_t TotalBlocks)
 {
 	uint32_t offset = BlockAddress * VIRTUAL_MEMORY_BLOCK_SIZE;
-	uint32_t length = TotalBlocks * VIRTUAL_MEMORY_BLOCK_SIZE;
+/*	uint32_t length = TotalBlocks * VIRTUAL_MEMORY_BLOCK_SIZE;
 
 	serialWriteArray(readcmdmsg, 5);
 	for(int i = 9; i >= 0; i--)
@@ -21,7 +21,7 @@ void readData(const uint32_t BlockAddress, uint16_t TotalBlocks)
 		serialWrite(digitLookup[(length / (uint32_t)pow(10, i)) % 10]);
 	}
 	serialWrite('\n');
-	serialWrite('\r');
+	serialWrite('\r');*/
 
 	/* Wait until endpoint is ready before continuing */
 	if (Endpoint_WaitUntilReady())

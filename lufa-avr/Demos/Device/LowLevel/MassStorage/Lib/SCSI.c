@@ -72,23 +72,23 @@ bool SCSI_DecodeSCSICommand(void)
 	switch (CommandBlock.SCSICommandData[0])
 	{
 		case SCSI_CMD_INQUIRY:
-			serialWriteArray(inquirymsg, 17);
+			//serialWriteArray(inquirymsg, 17);
 			CommandSuccess = SCSI_Command_Inquiry();
 			break;
 		case SCSI_CMD_REQUEST_SENSE:
-			serialWriteArray(requestsensemsg, 23);
+			//serialWriteArray(requestsensemsg, 23);
 			CommandSuccess = SCSI_Command_Request_Sense();
 			break;
 		case SCSI_CMD_READ_CAPACITY_10:
-			serialWriteArray(readcapacitymsg, 23);
+			//serialWriteArray(readcapacitymsg, 23);
 			CommandSuccess = SCSI_Command_Read_Capacity_10();
 			break;
 		case SCSI_CMD_SEND_DIAGNOSTIC:
-			serialWriteArray(senddiagnosticmsg, 25);
+			//serialWriteArray(senddiagnosticmsg, 25);
 			CommandSuccess = SCSI_Command_Send_Diagnostic();
 			break;
 		case SCSI_CMD_WRITE_10:
-			serialWriteArray(writemsg, 15);
+			//serialWriteArray(writemsg, 15);
 			CommandSuccess = SCSI_Command_ReadWrite_10(DATA_WRITE);
 			break;
 		case SCSI_CMD_READ_10:
@@ -96,29 +96,29 @@ bool SCSI_DecodeSCSICommand(void)
 			CommandSuccess = SCSI_Command_ReadWrite_10(DATA_READ);
 			break;
 		case SCSI_CMD_MODE_SENSE_6:
-			serialWriteArray(modesensemsg, 20);
+			//serialWriteArray(modesensemsg, 20);
 			CommandSuccess = SCSI_Command_ModeSense_6();
 			break;
 		case SCSI_CMD_START_STOP_UNIT:
-			serialWriteArray(startstopmsg, 20);
+			//serialWriteArray(startstopmsg, 20);
 			/* These commands should just succeed, no handling required */
 			CommandSuccess = true;
 			CommandBlock.DataTransferLength = 0;
 			break;
 		case SCSI_CMD_TEST_UNIT_READY:
-			serialWriteArray(testunitmsg, 19);
+			//serialWriteArray(testunitmsg, 19);
 			/* These commands should just succeed, no handling required */
 			CommandSuccess = true;
 			CommandBlock.DataTransferLength = 0;
 			break;
 		case SCSI_CMD_PREVENT_ALLOW_MEDIUM_REMOVAL:
-			serialWriteArray(preventallowmediumremovalmsg, 31);
+			//serialWriteArray(preventallowmediumremovalmsg, 31);
 			/* These commands should just succeed, no handling required */
 			CommandSuccess = true;
 			CommandBlock.DataTransferLength = 0;
 			break;
 		case SCSI_CMD_VERIFY_10:
-			serialWriteArray(verifymsg, 16);
+			//serialWriteArray(verifymsg, 16);
 			/* These commands should just succeed, no handling required */
 			CommandSuccess = true;
 			CommandBlock.DataTransferLength = 0;
