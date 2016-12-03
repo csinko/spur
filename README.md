@@ -11,6 +11,12 @@ make clean
 make
 ```
 
+Then to upload to the Arudino Leonardo:
+
+```
+avrdude -p atmega32u4 -c avr109 -P /dev/ttyACM0 -b 57600 -D -U flash:w:MassStorage.hex
+```
+
 ## Preparing the SD Card
 
 The SD card must be formatted with a hybrid MBR/GPT and GRUB needs to be installed for both BIOS and UEFI.
