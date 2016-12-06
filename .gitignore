@@ -3,6 +3,11 @@
 *.lo
 *.o
 *.obj
+*.d
+*.lss
+*.map
+*.sym
+*.eep
 
 # Precompiled Headers
 *.gch
@@ -27,6 +32,9 @@
 *.exe
 *.out
 *.app
+*.elf
+*.hex
+*.bin
 
 # Sublime Text
 *.sublime-project
