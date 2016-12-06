@@ -4,7 +4,7 @@
 #include <avr/io.h>
 
 void serialBegin(void);
-void serialWrite( uint8_t data );
-void serialWriteArray( unsigned char data[], unsigned int len);
+void serialWrite(uint8_t data);
+void serialWriteArray(char data[], unsigned int len);
 
 #endif

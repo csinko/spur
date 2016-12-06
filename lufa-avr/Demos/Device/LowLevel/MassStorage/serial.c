@@ -11,7 +11,7 @@ void serialBegin()
 }
 
 // output a single byte to uart
-void serialWrite( uint8_t data )
+void serialWrite(uint8_t data)
 {
 	/* Wait for empty transmit buffer */
 	while ( !( UCSR1A & (1<<UDRE1)) )
@@ -21,7 +21,7 @@ void serialWrite( uint8_t data )
 }
 
 // output a string to uart
-void serialWriteArray( unsigned char data[], unsigned int len)
+void serialWriteArray(char data[], unsigned int len)
 {
 	for(int i = 0; i < len; i++)
 	{
