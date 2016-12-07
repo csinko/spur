@@ -3,7 +3,7 @@
 void readData(const uint32_t BlockAddress, uint16_t TotalBlocks)
 {
 	uint32_t offset = BlockAddress * VIRTUAL_MEMORY_BLOCK_SIZE;
-	uint8_t buffer;
+	uint8_t buffer[16];
 
 	DEBUG(MSG_MASS, TYPE_INFO, "Reading from offset ", 20, false); DEBUG_HEX(offset, 8, false);
 	DEBUG_TEXT(" (block ", 8, false); DEBUG_INT(BlockAddress, false); DEBUG_TEXT(") with length ", 14, false);
@@ -37,12 +37,14 @@ void readData(const uint32_t BlockAddress, uint16_t TotalBlocks)
 				}
 			}
 
+			sd_raw_read(offset, buffer, 16);
+			offset += 16;
+
 			for(int j = 0; j < 16; j++)
 			{
-				sd_raw_read(offset, &buffer, 1);
-				Endpoint_Write_8(buffer);
-				offset++;
+				Endpoint_Write_8(buffer[j]);
 			}
+
 			//DEBUG(MSG_SDCARD, TYPE_INFO, "Read 16 bytes from offset ", 26, false); DEBUG_HEX(offset, 8, true);
 
 			/* Increment the block 16 byte block counter */
