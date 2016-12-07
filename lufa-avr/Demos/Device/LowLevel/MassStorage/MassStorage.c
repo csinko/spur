@@ -17,9 +17,11 @@ int main(void)
 	if(!sd_raw_init())
 	{
 		LEDs_SetAllLEDs(LEDMASK_USB_ERROR);
-		serialWriteArray("Error: Unable to init SD card\n\r", 31);
-		for (;;) ;
+		DEBUG(MSG_SDCARD, TYPE_ERR, "Unable to init SD card", 14, true);
+		for(;;)
+			;
 	}
+	DEBUG(MSG_SDCARD, TYPE_INFO, "Successfully initialized SD card", 32, true);
 
 	SetupHardware();
 	LEDs_SetAllLEDs(LEDMASK_USB_NOTREADY);
@@ -74,6 +76,8 @@ void SetupHardware(void)
 /** Event handler for the USB_Connect event. This indicates that the device is enumerating via the status LEDs. */
 void EVENT_USB_Device_Connect(void)
 {
+	DEBUG(MSG_USB, TYPE_INFO, "Device is enumerating", 21, true);
+
 	/* Indicate USB enumerating */
 	LEDs_SetAllLEDs(LEDMASK_USB_ENUMERATING);
 
@@ -86,6 +90,8 @@ void EVENT_USB_Device_Connect(void)
  */
 void EVENT_USB_Device_Disconnect(void)
 {
+	DEBUG(MSG_USB, TYPE_INFO, "Device has disconnected", 23, true);
+
 	/* Indicate USB not ready */
 	LEDs_SetAllLEDs(LEDMASK_USB_NOTREADY);
 }
@@ -95,12 +101,19 @@ void EVENT_USB_Device_Disconnect(void)
  */
 void EVENT_USB_Device_ConfigurationChanged(void)
 {
-	//serialWriteArray(msg, 9);
+	DEBUG(MSG_USB, TYPE_INFO, "Enumeration complete", 20, true);
+	DEBUG(MSG_USB, TYPE_INFO, "Configuration set by host", 25, true);
+
 	bool ConfigSuccess = true;
 
 	/* Setup Mass Storage Data Endpoints */
 	ConfigSuccess &= Endpoint_ConfigureEndpoint(MASS_STORAGE_IN_EPADDR,  EP_TYPE_BULK, MASS_STORAGE_IO_EPSIZE, 1);
 	ConfigSuccess &= Endpoint_ConfigureEndpoint(MASS_STORAGE_OUT_EPADDR, EP_TYPE_BULK, MASS_STORAGE_IO_EPSIZE, 1);
+
+	if(ConfigSuccess)
+		DEBUG(MSG_USB, TYPE_INFO, "Endpoints have been set up", 26, true);
+	else
+		DEBUG(MSG_USB, TYPE_ERR, "Unable to configure endpoints", 29, true);
 
 	/* Indicate endpoint configuration success or failure */
 	LEDs_SetAllLEDs(ConfigSuccess ? LEDMASK_USB_READY : LEDMASK_USB_ERROR);
@@ -112,44 +125,12 @@ void EVENT_USB_Device_ConfigurationChanged(void)
  */
 void EVENT_USB_Device_ControlRequest(void)
 {
-	/*uint8_t type = USB_ControlRequest.bmRequestType;
-	for(int i = 7; i >= 0; i--)
-	{
-		uint8_t bit = type >> i;
-		bit &= 1;
-		if(bit == 1)
-			serialWrite('1');
-		else
-			serialWrite('0');
-	}
-	serialWrite(' ');
-
-	uint8_t commandCode = USB_ControlRequest.bRequest;
-	for(int i = 7; i >= 0; i--)
-	{
-		uint8_t bit = commandCode >> i;
-		bit &= 1;
-		if(bit == 1)
-			serialWrite('1');
-		else
-			serialWrite('0');
-	}
-	serialWrite(' ');
-
-	uint16_t wValue = USB_ControlRequest.wValue;
-	for(int i = 15; i >= 0; i--)
-	{
-		uint16_t bit = wValue >> i;
-		bit &= 1;
-		if(bit == 1)
-			serialWrite('1');
-		else
-			serialWrite('0');
-	}
-
-	serialWrite(' ');
-	serialWrite('\n');
-	serialWrite('\r');*/
+	DEBUG(MSG_USB, TYPE_INFO, "Control request recieved:", 25, true);
+	DEBUG(MSG_USB, TYPE_INFO, "\tbmRequestType: ", 16, false); DEBUG_HEX(USB_ControlRequest.bmRequestType, 2, true);
+	DEBUG(MSG_USB, TYPE_INFO, "\tbRequest: ", 11, false); DEBUG_HEX(USB_ControlRequest.bRequest, 2, true);
+	DEBUG(MSG_USB, TYPE_INFO, "\twIndex: ", 8, false); DEBUG_HEX(USB_ControlRequest.wIndex, 4, true);
+	DEBUG(MSG_USB, TYPE_INFO, "\twLength: ", 9, false); DEBUG_INT(USB_ControlRequest.wLength, true);
+	DEBUG(MSG_USB, TYPE_INFO, "\twValue: ", 8, false); DEBUG_HEX(USB_ControlRequest.wValue, 4, true);
 
 	/* Process UFI specific control requests */
 	switch (USB_ControlRequest.bRequest)
@@ -157,6 +138,8 @@ void EVENT_USB_Device_ControlRequest(void)
 		case MS_REQ_MassStorageReset:
 			if (USB_ControlRequest.bmRequestType == (REQDIR_HOSTTODEVICE | REQTYPE_CLASS | REQREC_INTERFACE))
 			{
+				DEBUG(MSG_MASS, TYPE_WARN, "Mass storage reset", 18, true);
+
 				Endpoint_ClearSETUP();
 				Endpoint_ClearStatusStage();
 
@@ -168,9 +151,12 @@ void EVENT_USB_Device_ControlRequest(void)
 		case MS_REQ_GetMaxLUN:
 			if (USB_ControlRequest.bmRequestType == (REQDIR_DEVICETOHOST | REQTYPE_CLASS | REQREC_INTERFACE))
 			{
+				DEBUG(MSG_MASS, TYPE_INFO, "Max LUNs requested", 18, true);
+
 				Endpoint_ClearSETUP();
 
 				/* Indicate to the host the number of supported LUNs (virtual disks) on the device */
+				DEBUG(MSG_MASS, TYPE_INFO, "Device has ", 11, false); DEBUG_INT(TOTAL_LUNS, false); DEBUG_TEXT(" LUNs", 5, true);
 				Endpoint_Write_8(TOTAL_LUNS - 1);
 
 				Endpoint_ClearIN();
@@ -265,6 +251,8 @@ static bool ReadInCommandBlock(void)
 		  return false;
 	}
 
+	DEBUG(MSG_USB, TYPE_INFO, "Command block recieved", 22, true);
+
 	/* Verify the command block - abort if invalid */
 	if ((CommandBlock.Signature         != MS_CBW_SIGNATURE) ||
 	    (CommandBlock.LUN               >= TOTAL_LUNS)       ||
@@ -272,6 +260,8 @@ static bool ReadInCommandBlock(void)
 		(CommandBlock.SCSICommandLength == 0)                ||
 		(CommandBlock.SCSICommandLength >  sizeof(CommandBlock.SCSICommandData)))
 	{
+		DEBUG(MSG_USB, TYPE_WARN, "Invalid command block recieved", 30, true);
+
 		/* Stall both data pipes until reset by host */
 		Endpoint_StallTransaction();
 		Endpoint_SelectEndpoint(MASS_STORAGE_IN_EPADDR);
@@ -279,8 +269,6 @@ static bool ReadInCommandBlock(void)
 
 		return false;
 	}
-
-	//serialWriteArray(msg, 21);
 
 	/* Read in command block command data */
 	BytesTransferred = 0;
@@ -340,4 +328,3 @@ static void ReturnCommandStatus(void)
 	/* Finalize the stream transfer to send the last packet */
 	Endpoint_ClearIN();
 }
-

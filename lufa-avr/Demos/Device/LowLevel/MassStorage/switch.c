@@ -16,6 +16,8 @@ volatile bool switchPosChanged = false;
 
 ISR(PCINT0_vect)
 {
+	DEBUG(MSG_SWITCH, TYPE_INFO, "Switch interrupt triggered", 26, true);
+
 	switchPosChanged = true;
 	_delay_ms(SWITCH_DEBOUNCE_TIME);
 }
@@ -40,10 +42,11 @@ void switchTask()
 		if(PINB & (1 << PB6))
 		{
 			// PB6 is high, position 1 selected
+			DEBUG(MSG_SWITCH, TYPE_INFO, "Position 1", 10, true);
+
 			uint8_t buffer[11];
 			sd_raw_read(0x00100047, buffer, 11);
-			serialWriteArray((char *)buffer, 11);
-			serialWriteArray(" -> ", 4);
+			DEBUG(MSG_SWITCH, TYPE_INFO, "FAT32 label: ", 13, false); DEBUG_TEXT((char *)buffer, 11, false); DEBUG_TEXT(" -> ", 4, false);
 
 			// set fs label to SPUR_MODE01
 			sd_raw_write(0x00100047, (unsigned char*)"SPUR-MODE01", 11);
@@ -51,16 +54,16 @@ void switchTask()
 			sd_raw_write(0x00300200, (unsigned char*)"SPUR-MODE01", 11);
 
 			sd_raw_read(0x00100047, buffer, 11);
-			serialWriteArray((char *)buffer, 11);
-			serialWriteArray("\n\r", 2);
+			DEBUG_TEXT((char *)buffer, 11, true);
 		}
 		else if(PINB & (1 << PB7))
 		{
 			// PB7 is high, position 2 selected
+			DEBUG(MSG_SWITCH, TYPE_INFO, "Position 2", 10, true);
+
 			uint8_t buffer[11];
 			sd_raw_read(0x00100047, buffer, 11);
-			serialWriteArray((char *)buffer, 11);
-			serialWriteArray(" -> ", 4);
+			DEBUG(MSG_SWITCH, TYPE_INFO, "FAT32 label: ", 13, false); DEBUG_TEXT((char *)buffer, 11, false); DEBUG_TEXT(" -> ", 4, false);
 
 			// set fs label to SPUR_MODE02
 			sd_raw_write(0x00100047, (unsigned char*)"SPUR-MODE02", 11);
@@ -68,8 +71,7 @@ void switchTask()
 			sd_raw_write(0x00300200, (unsigned char*)"SPUR-MODE02", 11);
 			
 			sd_raw_read(0x00100047, buffer, 11);
-			serialWriteArray((char *)buffer, 11);
-			serialWriteArray("\n\r", 2);
+			DEBUG_TEXT((char *)buffer, 11, true);
 		}
 		else
 		{

@@ -31,22 +31,9 @@ static const SCSI_Inquiry_Response_t InquiryData =
 		.RelAddr             = false,
 
 		.VendorID            = "Spur",
-		.ProductID           = "Spur Multiboot",
+		.ProductID           = "",
 		.RevisionID          = {'0','.','0','0'},
 	};
-
-unsigned char inquirymsg[] = {'i', 'n', 'q', 'u', 'i', 'r', 'y', ' ', 'c', 'o', 'm', 'm', 'a', 'n', 'd', '\n', '\r'};
-unsigned char requestsensemsg[] = {'r', 'e', 'q', 'u', 'e', 's', 't', ' ', 's', 'e', 'n', 's', 'e', ' ', 'c', 'o', 'm', 'm', 'a', 'n', 'd', '\n', '\r'};
-unsigned char readcapacitymsg[] = {'r', 'e', 'a', 'd', ' ', 'c', 'a', 'p', 'a', 'c', 'i', 't', 'y', ' ', 'c', 'o', 'm', 'm', 'a', 'n', 'd', '\n', '\r'};
-unsigned char senddiagnosticmsg[] = {'s', 'e', 'n', 'd', ' ', 'd', 'i', 'a', 'g', 'n', 'o', 's', 't', 'i', 'c', ' ', 'c', 'o', 'm', 'm', 'a', 'n', 'd', '\n', '\r'};
-unsigned char writemsg[] = {'w', 'r', 'i', 't', 'e', ' ', 'c', 'o', 'm', 'm', 'a', 'n', 'd', '\n', '\r'};
-unsigned char readmsg[] = {'r', 'e', 'a', 'd', ' ', 'c', 'o', 'm', 'm', 'a', 'n', 'd', '\n', '\r'};
-unsigned char modesensemsg[] = {'m', 'o', 'd', 'e', ' ', 's', 'e', 'n', 's', 'e', ' ', 'c', 'o', 'm', 'm', 'a', 'n', 'd', '\n', '\r'};
-unsigned char startstopmsg[] = {'s', 't', 'a', 'r', 't', ' ', 's', 't', 'o', 'p', ' ', 'c', 'o', 'm', 'm', 'a', 'n', 'd', '\n', '\r'};
-unsigned char testunitmsg[] = {'t', 'e', 's', 't', ' ', 'u', 'n', 'i', 't', ' ', 'c', 'o', 'm', 'm', 'a', 'n', 'd', '\n', '\r'};
-unsigned char preventallowmediumremovalmsg[] = {'p', 'r', 'e', 'v', 'e', 'n', 't', ' ', 'a', 'l', 'l', 'o', 'w', ' ', 'r', 'e', 'm', 'o', 'v', 'a', 'l', ' ', 'c', 'o', 'm', 'm', 'a', 'n', 'd', '\n', '\r'};
-unsigned char verifymsg[] = {'v', 'e', 'r', 'i', 'f', 'y', ' ', 'c', 'o', 'm', 'm', 'a', 'n', 'd', '\n', '\r'};
-unsigned char invalidmsg[] = {'i', 'n', 'v', 'a', 'l', 'i', 'd', ' ', 'c', 'o', 'm', 'm', 'a', 'n', 'd', '\n', '\r'};
 
 /** Structure to hold the sense data for the last issued SCSI command, which is returned to the host after a SCSI REQUEST SENSE
  *  command is issued. This gives information on exactly why the last command failed to complete.
@@ -72,58 +59,59 @@ bool SCSI_DecodeSCSICommand(void)
 	switch (CommandBlock.SCSICommandData[0])
 	{
 		case SCSI_CMD_INQUIRY:
-			//serialWriteArray(inquirymsg, 17);
+			DEBUG(MSG_MASS, TYPE_INFO, "Inquiry command recieved", 24, true);
 			CommandSuccess = SCSI_Command_Inquiry();
 			break;
 		case SCSI_CMD_REQUEST_SENSE:
-			//serialWriteArray(requestsensemsg, 23);
+			DEBUG(MSG_MASS, TYPE_INFO, "Request sense command recieved", 30, true);
 			CommandSuccess = SCSI_Command_Request_Sense();
 			break;
 		case SCSI_CMD_READ_CAPACITY_10:
-			//serialWriteArray(readcapacitymsg, 23);
+			DEBUG(MSG_MASS, TYPE_INFO, "Read capacity command recieved", 30, true);
 			CommandSuccess = SCSI_Command_Read_Capacity_10();
 			break;
 		case SCSI_CMD_SEND_DIAGNOSTIC:
-			//serialWriteArray(senddiagnosticmsg, 25);
+			DEBUG(MSG_MASS, TYPE_INFO, "Send diagnostic command recieved", 32, true);
 			CommandSuccess = SCSI_Command_Send_Diagnostic();
 			break;
 		case SCSI_CMD_WRITE_10:
-			//serialWriteArray(writemsg, 15);
+			DEBUG(MSG_MASS, TYPE_INFO, "Write command recieved", 22, true);
 			CommandSuccess = SCSI_Command_ReadWrite_10(DATA_WRITE);
 			break;
 		case SCSI_CMD_READ_10:
-			//serialWriteArray(readmsg, 14);
+			DEBUG(MSG_MASS, TYPE_INFO, "Read command recieved", 21, true);
 			CommandSuccess = SCSI_Command_ReadWrite_10(DATA_READ);
 			break;
 		case SCSI_CMD_MODE_SENSE_6:
-			//serialWriteArray(modesensemsg, 20);
+			DEBUG(MSG_MASS, TYPE_INFO, "Mode sense command recieved", 27, true);
 			CommandSuccess = SCSI_Command_ModeSense_6();
 			break;
 		case SCSI_CMD_START_STOP_UNIT:
-			//serialWriteArray(startstopmsg, 20);
+			DEBUG(MSG_MASS, TYPE_INFO, "Start stop unit command recieved", 32, true);
 			/* These commands should just succeed, no handling required */
 			CommandSuccess = true;
 			CommandBlock.DataTransferLength = 0;
 			break;
 		case SCSI_CMD_TEST_UNIT_READY:
-			//serialWriteArray(testunitmsg, 19);
+			DEBUG(MSG_MASS, TYPE_INFO, "Test unit ready command recieved", 32, true);
 			/* These commands should just succeed, no handling required */
 			CommandSuccess = true;
 			CommandBlock.DataTransferLength = 0;
 			break;
 		case SCSI_CMD_PREVENT_ALLOW_MEDIUM_REMOVAL:
-			//serialWriteArray(preventallowmediumremovalmsg, 31);
+			DEBUG(MSG_MASS, TYPE_INFO, "Prevent allow medium removal command recieved", 45, true);
 			/* These commands should just succeed, no handling required */
 			CommandSuccess = true;
 			CommandBlock.DataTransferLength = 0;
 			break;
 		case SCSI_CMD_VERIFY_10:
-			//serialWriteArray(verifymsg, 16);
+			DEBUG(MSG_MASS, TYPE_INFO, "Verify command recieved", 23, true);
 			/* These commands should just succeed, no handling required */
 			CommandSuccess = true;
 			CommandBlock.DataTransferLength = 0;
 			break;
 		default:
+			DEBUG(MSG_MASS, TYPE_WARN, "Invalid command recieved", 24, true);
 			/* Update the SENSE key to reflect the invalid command */
 			SCSI_SET_SENSE(SCSI_SENSE_KEY_ILLEGAL_REQUEST,
 		                   SCSI_ASENSE_INVALID_COMMAND,

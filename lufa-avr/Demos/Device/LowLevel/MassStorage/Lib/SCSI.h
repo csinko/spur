@@ -11,6 +11,7 @@
 
 		#include "../serial.h"
 		#include "../data.h"
+		#include "../debug.h"
 		#include "../MassStorage.h"
 		#include "../Descriptors.h"
 		//#include "DataflashManager.h"

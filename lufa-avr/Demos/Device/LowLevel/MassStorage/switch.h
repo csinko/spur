@@ -6,6 +6,7 @@
 #include <util/delay.h>
 #include <stdbool.h>
 #include "serial.h"
+#include "debug.h"
 #include "Lib/sd_raw.h"
 #include "Lib/sd_raw_config.h"
 
