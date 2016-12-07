@@ -45,6 +45,7 @@
 		#include "Descriptors.h"
 
 		#include "serial.h"
+		#include "switch.h"
 		#include "Lib/SCSI.h"
 		//#include "Lib/DataflashManager.h"
 		#include "Config/AppConfig.h"

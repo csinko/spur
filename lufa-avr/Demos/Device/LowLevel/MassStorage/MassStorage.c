@@ -10,67 +10,27 @@ MS_CommandStatusWrapper_t CommandStatus = { .Signature = MS_CSW_SIGNATURE };
 /** Flag to asynchronously abort any in-progress data transfers upon the reception of a mass storage reset command. */
 volatile bool IsMassStoreReset = false;
 
-unsigned char serialmsg[] = {'T', 'e', 's', 't'};
-unsigned char hexLookup[] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'F'};
-unsigned char sderrormsg[] = {'s', 'd', ' ', 'c', 'a', 'r', 'd', ' ', 'i', 'n', 'i', 't', ' ', 'e', 'r', 'r', 'o', 'r', '\n', '\r'};
-unsigned char fslabelmsg[] = "original label:\n\r";
-unsigned char fslabelmsg2[] = "modified label:\n\r";
-unsigned char pos1msg[] = "position 1\n\r";
-unsigned char pos2msg[] = "position 2\n\r";
-
 int main(void)
 {
 	serialBegin();
-	
+
 	if(!sd_raw_init())
 	{
 		LEDs_SetAllLEDs(LEDMASK_USB_ERROR);
-		serialWriteArray(sderrormsg, 20);
+		serialWriteArray("Error: Unable to init SD card\n\r", 31);
 		for (;;) ;
 	}
 
-	/*
-		pin for switch positions:
-		Pin 10 -> PB6 (PCINT6)
-		Pin 11 -> PB7 (PCINT7)
-
-		fs label offsets:
-		address			sector		byte
-		0x00100047		2048		71		fat32 boot sector
-		0x00100c47		2054		71		backup boot sector
-		0x00300200		6145		0		directory entry
-	*/
-
-	// set pins as input
-	DDRB &= ~(1 << DDB7) & ~(1 << DDB6);
-
-	// get switch position
-	if(PINB & (1 << PB6))
-	{
-		// PB6 is high, position 1 selected
-		// set fs label to SPUR_MODE01
-		sd_raw_write(0x00100047, "SPUR-MODE01", 11);
-		sd_raw_write(0x00100c47, "SPUR-MODE01", 11);
-		sd_raw_write(0x00300200, "SPUR-MODE01", 11);
-	}
-	else if(PINB & (1 << PB7))
-	{
-		// PB7 is high, position 2 selected
-		// set fs label to SPUR_MODE02
-		sd_raw_write(0x00100047, "SPUR_MODE02", 11);
-		sd_raw_write(0x00100c47, "SPUR_MODE02", 11);
-		sd_raw_write(0x00300200, "SPUR_MODE02", 11);
-	}
-
 	SetupHardware();
-
 	LEDs_SetAllLEDs(LEDMASK_USB_NOTREADY);
+	initSwitch();
 	GlobalInterruptEnable();
 
 	for (;;)
 	{
 		MassStorage_Task();
 		USB_USBTask();
+		switchTask();
 	}
 }
 
