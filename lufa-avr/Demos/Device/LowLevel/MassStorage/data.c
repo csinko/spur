@@ -3,7 +3,7 @@
 void readData(const uint32_t BlockAddress, uint16_t TotalBlocks)
 {
 	uint32_t offset = BlockAddress * VIRTUAL_MEMORY_BLOCK_SIZE;
-	uint8_t buffer[16];
+	uint8_t buffer[64];
 
 	DEBUG(MSG_MASS, TYPE_INFO, "Reading from offset ", 20, false); DEBUG_HEX(offset, 8, false);
 	DEBUG_TEXT(" (block ", 8, false); DEBUG_INT(BlockAddress, false); DEBUG_TEXT(") with length ", 14, false);
@@ -15,40 +15,45 @@ void readData(const uint32_t BlockAddress, uint16_t TotalBlocks)
 
 	while (TotalBlocks)
 	{
-		uint8_t BytesInBlockDiv16 = 0;
+		uint8_t BytesInBlockDiv64 = 0;
 
-		/* Read an endpoint packet sized data block from the Dataflash */
-		while (BytesInBlockDiv16 < (VIRTUAL_MEMORY_BLOCK_SIZE >> 4))
+		// read data in 64 byte chunks (max endpoint size)
+		while (BytesInBlockDiv64 < (VIRTUAL_MEMORY_BLOCK_SIZE >> 6))
 		{
-			/* Check if the endpoint is currently full */
-			if (!(Endpoint_IsReadWriteAllowed()))
+			sd_raw_read(offset, buffer, 64);
+			offset += 64;
+
+			// write 16 bytes at a time to endpoint so that we can check if it gets full in between chunks
+			for(int j = 0; j < 4; j++)
 			{
-				//DEBUG(MSG_MASS, TYPE_INFO, "Endpoint not allowing read/write", 32, true);
-
-				/* Clear the endpoint bank to send its contents to the host */
-				Endpoint_ClearIN();
-				//DEBUG(MSG_MASS, TYPE_INFO, "Cleared endpoint", 16, true);
-
-				/* Wait until the endpoint is ready for more data */
-				if (Endpoint_WaitUntilReady())
+				/* Check if the endpoint is currently full */
+				if (!(Endpoint_IsReadWriteAllowed()))
 				{
-					//DEBUG(MSG_MASS, TYPE_INFO, "Waiting for endpoint to be ready", 32, true);
-					return;
+					//DEBUG(MSG_MASS, TYPE_INFO, "Endpoint not allowing read/write", 32, true);
+
+					/* Clear the endpoint bank to send its contents to the host */
+					Endpoint_ClearIN();
+					//DEBUG(MSG_MASS, TYPE_INFO, "Cleared endpoint", 16, true);
+
+					/* Wait until the endpoint is ready for more data */
+					if (Endpoint_WaitUntilReady())
+					{
+						//DEBUG(MSG_MASS, TYPE_INFO, "Waiting for endpoint to be ready", 32, true);
+						return;
+					}
+				}
+
+				// write each byte to endpoint
+				for(int k = 0; k < 16; k++)
+				{
+					Endpoint_Write_8(buffer[(j * 16) + k]);
 				}
 			}
 
-			sd_raw_read(offset, buffer, 16);
-			offset += 16;
+			//DEBUG(MSG_SDCARD, TYPE_INFO, "Read 64 bytes from offset ", 26, false); DEBUG_HEX(offset, 8, true);
 
-			for(int j = 0; j < 16; j++)
-			{
-				Endpoint_Write_8(buffer[j]);
-			}
-
-			//DEBUG(MSG_SDCARD, TYPE_INFO, "Read 16 bytes from offset ", 26, false); DEBUG_HEX(offset, 8, true);
-
-			/* Increment the block 16 byte block counter */
-			BytesInBlockDiv16++;
+			// increment chunk counter
+			BytesInBlockDiv64++;
 
 			/* Check if the current command is being aborted by the host */
 			if (IsMassStoreReset)
