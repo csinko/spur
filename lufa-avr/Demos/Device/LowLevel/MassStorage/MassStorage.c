@@ -31,7 +31,6 @@ int main(void)
 	for (;;)
 	{
 		MassStorage_Task();
-		USB_USBTask();
 		switchTask();
 	}
 }

@@ -3,7 +3,7 @@
 void readData(const uint32_t BlockAddress, uint16_t TotalBlocks)
 {
 	uint32_t offset = BlockAddress * VIRTUAL_MEMORY_BLOCK_SIZE;
-	uint8_t buffer[64];
+	uint8_t buffer[512];
 
 	DEBUG(MSG_MASS, TYPE_INFO, "Reading from offset ", 20, false); DEBUG_HEX(offset, 8, false);
 	DEBUG_TEXT(" (block ", 8, false); DEBUG_INT(BlockAddress, false); DEBUG_TEXT(") with length ", 14, false);
@@ -15,16 +15,16 @@ void readData(const uint32_t BlockAddress, uint16_t TotalBlocks)
 
 	while (TotalBlocks)
 	{
-		uint8_t BytesInBlockDiv64 = 0;
+		//uint8_t BytesInBlockDiv128 = 0;
 
-		// read data in 64 byte chunks (max endpoint size)
-		while (BytesInBlockDiv64 < (VIRTUAL_MEMORY_BLOCK_SIZE >> 6))
-		{
-			sd_raw_read(offset, buffer, 64);
-			offset += 64;
+		// read data in 128 byte chunks (max endpoint size)
+		//while (BytesInBlockDiv128 < (VIRTUAL_MEMORY_BLOCK_SIZE >> 7))
+		//{
+			sd_raw_read(offset, buffer, 512);
+			offset += 512;
 
-			// write 16 bytes at a time to endpoint so that we can check if it gets full in between chunks
-			for(int j = 0; j < 4; j++)
+			// write 32 bytes at a time to endpoint so that we can check if it gets full in between chunks
+			for(int j = 0; j < 16; j++)
 			{
 				/* Check if the endpoint is currently full */
 				if (!(Endpoint_IsReadWriteAllowed()))
@@ -44,21 +44,21 @@ void readData(const uint32_t BlockAddress, uint16_t TotalBlocks)
 				}
 
 				// write each byte to endpoint
-				for(int k = 0; k < 16; k++)
+				for(int k = 0; k < 32; k++)
 				{
-					Endpoint_Write_8(buffer[(j * 16) + k]);
+					Endpoint_Write_8(buffer[(j * 32) + k]);
 				}
 			}
 
-			//DEBUG(MSG_SDCARD, TYPE_INFO, "Read 64 bytes from offset ", 26, false); DEBUG_HEX(offset, 8, true);
+			//DEBUG(MSG_SDCARD, TYPE_INFO, "Read 128 bytes from offset ", 26, false); DEBUG_HEX(offset, 8, true);
 
 			// increment chunk counter
-			BytesInBlockDiv64++;
+			//BytesInBlockDiv128++;
 
 			/* Check if the current command is being aborted by the host */
 			if (IsMassStoreReset)
 			  return;
-		}
+		//}
 
 		/* Decrement the blocks remaining counter */
 		TotalBlocks--;
