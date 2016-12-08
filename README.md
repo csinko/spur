@@ -21,13 +21,13 @@ avrdude -p atmega32u4 -c avr109 -P /dev/ttyACM0 -b 57600 -D -U flash:w:MassStora
 
 The SD card must be formatted with a hybrid MBR/GPT and GRUB needs to be installed for both BIOS and UEFI.
 
-Assuming _/dev/mmc_ is the SD card:
+Assuming _/dev/sdx_ is the SD card:
 ```
 # Wipe the card
-$ shred -n 0 -z -v /dev/mmc
+$ shred -n 0 -z -v /dev/sdx
 
 # Partition the card
-$ gdisk /dev/mmc
+$ gdisk /dev/sdx
 GPT fdisk (gdisk) version 1.0.1
 
 Caution: invalid main GPT header, but valid backup; regenerating main header
@@ -55,7 +55,7 @@ Your answer: 2
 Command (? for help): n
 Partition number (1-128, default 1): 
 First sector (34-15523806, default = 2048) or {+-}size{KMGTP}: 
-Last sector (2048-15523806, default = 15523806) or {+-}size{KMGTP}: +1G
+Last sector (2048-15523806, default = 15523806) or {+-}size{KMGTP}: +256M
 Current type is 'Linux filesystem'
 Hex code or GUID (L to show codes, Enter = 8300): ef00
 Changed type of partition to 'EFI System'
@@ -73,7 +73,7 @@ added to the hybrid MBR, in sequence: 1
 Place EFI GPT (0xEE) partition first in MBR (good for GRUB)? (Y/N): y
 
 Creating entry for GPT partition #1 (MBR partition #2)
-Enter an MBR hex code (default EF): 
+Enter an MBR hex code (default EF): 0b
 Set the bootable flag? (Y/N): y
 
 Unused partition space(s) found. Use one to protect more partitions? (Y/N): n
@@ -84,26 +84,26 @@ Final checks complete. About to write GPT data. THIS WILL OVERWRITE EXISTING
 PARTITIONS!!
 
 Do you want to proceed? (Y/N): y
-OK; writing new GUID partition table (GPT) to /dev/mmc.
+OK; writing new GUID partition table (GPT) to /dev/sdx.
 The operation has completed successfully.
 
 # Format the EFI system partition to FAT32
-mkfs.msdos -F 32 -n SPUR /dev/mmcp1
+$ mkfs.msdos -F 32 -n SPUR /dev/sdx1
 
 # Mount EFI system partition
-mount /dev/mmcp1 /mnt
-cd /mnt
+$ mount /dev/sdx1 /mnt
+$ cd /mnt
 
 # Create directories
-mkdir boot EFI
+$ mkdir boot EFI
 
 # Install GRUB for BIOS
-grub-install --force --target=i386-pc --boot-directory=./boot /dev/mmc
+$ grub-install --force --target=i386-pc --boot-directory=./boot /dev/sdx
 
 # Install GRUB for UEFI
-grub-install --target=x86_64-efi --efi-directory=./ --boot-directory=./EFI --bootloader-id=boot --removable /dev/mmc
+$ grub-install --target=x86_64-efi --efi-directory=./ --boot-directory=./EFI --bootloader-id=boot --removable /dev/sdx
 
 # Copy over config file
-cp ~/spur/grub/grub.cfg /mnt/boot/grub/
-cp ~/spur/grub/grub.cfg /mnt/EFI/grub/
+$ cp ~/spur/grub/grub.cfg /mnt/boot/grub/
+$ cp ~/spur/grub/grub.cfg /mnt/EFI/grub/
 ```
