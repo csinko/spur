@@ -43,7 +43,7 @@
 #ifndef _APP_CONFIG_H_
 #define _APP_CONFIG_H_
 
-  #define DEBUG_MODE
+//  #define DEBUG_MODE
 
 	#define TOTAL_LUNS                1
   #define LUN_MEDIA_BLOCKS        15523840  // matches SD card size: 7.4 GiB
