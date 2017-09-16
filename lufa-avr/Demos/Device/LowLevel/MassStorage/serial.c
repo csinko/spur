@@ -1,5 +1,6 @@
 #include "serial.h"
 
+#ifdef DEBUG_MODE
 // initialize the hardware uart: 57600 baud, 8 bits, no parity, 2 stop bits
 void serialBegin()
 {
@@ -28,3 +29,4 @@ void serialWriteArray(char data[], unsigned int len)
 		serialWrite(*(data + i));
 	}
 }
+#endif

@@ -6,12 +6,6 @@ volatile bool switchPosChanged = false;
 	pins for switch positions:
 	Position 1: Pin 10 -> PB6 (PCINT6)
 	Position 2: Pin 11 -> PB7 (PCINT7)
-
-	fs label offsets:
-		address			sector		byte
-		0x00100047		2048		71		fat32 boot sector
-		0x00100c47		2054		71		backup boot sector
-		0x00300200		6145		0		directory entry
 */
 
 ISR(PCINT0_vect)
@@ -44,34 +38,42 @@ void switchTask()
 			// PB6 is high, position 1 selected
 			DEBUG(MSG_SWITCH, TYPE_INFO, "Position 1", 10, true);
 
+			#ifdef DEBUG_MODE
 			uint8_t buffer[11];
-			sd_raw_read(0x00100047, buffer, 11);
+			sd_raw_read(FS_LABEL_OFFSET_1, buffer, 11);
 			DEBUG(MSG_SWITCH, TYPE_INFO, "FAT32 label: ", 13, false); DEBUG_TEXT((char *)buffer, 11, false); DEBUG_TEXT(" -> ", 4, false);
+			#endif
 
 			// set fs label to SPUR_MODE01
-			sd_raw_write(0x00100047, (unsigned char*)"SPUR-MODE01", 11);
-			sd_raw_write(0x00100c47, (unsigned char*)"SPUR-MODE01", 11);
-			sd_raw_write(0x00300200, (unsigned char*)"SPUR-MODE01", 11);
+			sd_raw_write(FS_LABEL_OFFSET_1, (unsigned char*)"SPUR-MODE01", 11);
+			sd_raw_write(FS_LABEL_OFFSET_2, (unsigned char*)"SPUR-MODE01", 11);
+			sd_raw_write(FS_LABEL_OFFSET_3, (unsigned char*)"SPUR-MODE01", 11);
 
-			sd_raw_read(0x00100047, buffer, 11);
+			#ifdef DEBUG_MODE
+			sd_raw_read(FS_LABEL_OFFSET_1, buffer, 11);
 			DEBUG_TEXT((char *)buffer, 11, true);
+			#endif
 		}
 		else if(PINB & (1 << PB7))
 		{
 			// PB7 is high, position 2 selected
 			DEBUG(MSG_SWITCH, TYPE_INFO, "Position 2", 10, true);
 
+			#ifdef DEBUG_MODE
 			uint8_t buffer[11];
-			sd_raw_read(0x00100047, buffer, 11);
+			sd_raw_read(FS_LABEL_OFFSET_1, buffer, 11);
 			DEBUG(MSG_SWITCH, TYPE_INFO, "FAT32 label: ", 13, false); DEBUG_TEXT((char *)buffer, 11, false); DEBUG_TEXT(" -> ", 4, false);
+			#endif
 
 			// set fs label to SPUR_MODE02
-			sd_raw_write(0x00100047, (unsigned char*)"SPUR-MODE02", 11);
-			sd_raw_write(0x00100c47, (unsigned char*)"SPUR-MODE02", 11);
-			sd_raw_write(0x00300200, (unsigned char*)"SPUR-MODE02", 11);
+			sd_raw_write(FS_LABEL_OFFSET_1, (unsigned char*)"SPUR-MODE02", 11);
+			sd_raw_write(FS_LABEL_OFFSET_2, (unsigned char*)"SPUR-MODE02", 11);
+			sd_raw_write(FS_LABEL_OFFSET_3, (unsigned char*)"SPUR-MODE02", 11);
 			
-			sd_raw_read(0x00100047, buffer, 11);
+			#ifdef DEBUG_MODE
+			sd_raw_read(FS_LABEL_OFFSET_1, buffer, 11);
 			DEBUG_TEXT((char *)buffer, 11, true);
+			#endif
 		}
 		else
 		{

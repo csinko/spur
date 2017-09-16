@@ -12,7 +12,9 @@ volatile bool IsMassStoreReset = false;
 
 int main(void)
 {
+	#ifdef DEBUG_MODE
 	serialBegin();
+	#endif
 
 	if(!sd_raw_init())
 	{

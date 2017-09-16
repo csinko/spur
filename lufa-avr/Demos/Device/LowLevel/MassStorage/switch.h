@@ -12,6 +12,10 @@
 
 #define SWITCH_DEBOUNCE_TIME 8		// time it takes for switch to bounce plus a little longer (in ms)
 
+#define FS_LABEL_OFFSET_1 0x004f4400
+#define FS_LABEL_OFFSET_2 0x01bca447
+#define FS_LABEL_OFFSET_3 0x01bcb047
+
 void initSwitch(void);
 void switchTask(void);
 
